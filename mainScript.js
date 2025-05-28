@@ -1,7 +1,7 @@
 /**
  * <div id="room_list"></div>
  */
-
+import roomf from "roomf_20250516.csv";
 let d = new Date();
 let e = d.getDay();
 document.write("Hello, World!");
@@ -32,7 +32,7 @@ function csv_array(data) {
     console.log(dataArray);
 
 }
-csv_data('roomf_20250516.csv');
+csv_data('roomf');
 
 function filter(num, words) {
     
