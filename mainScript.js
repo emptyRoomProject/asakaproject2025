@@ -1,8 +1,8 @@
 /**
  * <div id="room_list"></div>
  */
-import roomf_20250516.csv from "roomf_20250516.csv";
-import roomf_20250516.json from "roomf_20250516.json";
+import roomf_20250516csv from "roomf_20250516.csv";
+import roomf_20250516json from "roomf_20250516.json";
 let d = new Date();
 let e = d.getDay();
 document.write("Hello, World!");
@@ -33,7 +33,7 @@ function csv_array(data) {
     console.log(dataArray);
 
 }
-csv_data('roomf');
+csv_data('roomf_20250516csv');
 
 function filter(num, words) {
     
@@ -58,7 +58,7 @@ btn.addEventListener('click', () => {
     setSport.innerText = getSportName;
 });
 
-const obj = JSON.parse(roomf_20250516.json);
+const obj = JSON.parse(roomf_20250516json);
 const findData = data.find(obj => {
       return obj.id === "1";
     });
