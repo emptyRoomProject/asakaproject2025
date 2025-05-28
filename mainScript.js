@@ -1,7 +1,8 @@
 /**
  * <div id="room_list"></div>
  */
-import roomf from "roomf_20250516.csv";
+import roomf_20250516.csv from "roomf_20250516.csv";
+import roomf_20250516.json from "roomf_20250516.json";
 let d = new Date();
 let e = d.getDay();
 document.write("Hello, World!");
