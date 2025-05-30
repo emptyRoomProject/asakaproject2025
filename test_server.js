@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors());
-app.use(express.static("public")); // index.htmlなどを提供
+app.use(express.static("docs")); // index.htmlなどを提供
 
 // データ読み込み
 const classrooms = JSON.parse(fs.readFileSync(path.join(__dirname, "data/classrooms.json")));
