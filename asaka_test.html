@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>空き教室確認アプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: #fff;
+      margin-bottom: 0.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+    }
+    .loading {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">空き教室を取得中...</h1>
+  <ul id="classroom-list"></ul>
+
+  <script>
+    async function fetchAvailableClassrooms() {
+      const title = document.getElementById("title");
+      const list = document.getElementById("classroom-list");
+
+      try {
+        const res = await fetch("/api/classrooms/available/now");
+
+        if (res.status === 204) {
+          title.textContent = "現在は授業時間外です";
+          return;
+        }
+
+        const data = await res.json();
+        const { weekday, period, results } = data;
+
+        title.textContent = `${weekday}曜・${period}限の空き教室`;
+
+        if (results.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "空き教室はありません";
+          list.appendChild(li);
+          return;
+        }
+
+        results.forEach((room) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <span>${room.name}（${room.building}）</span>
+            <span>定員: ${room.capacity}人</span>
+          `;
+          list.appendChild(li);
+        });
+
+      } catch (err) {
+        console.error(err);
+        title.textContent = "エラーが発生しました";
+      }
+    }
+
+    fetchAvailableClassrooms();
+  </script>
+</body>
+</html>
