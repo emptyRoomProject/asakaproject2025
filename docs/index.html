@@ -1,102 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>空き教室確認アプリ</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
-    select { margin-right: 10px; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 6px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>空き状況一覧</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Asapro2025_appNo1.css">
+  <script src="Asapro2025_appNo1.js"></script>
 </head>
 <body>
-  <h1 id="title">空き教室一覧</h1>
+  <header>
+    <h1>水曜２限</h1>
+    <button class="filter-btn" id="openFilter">🧃</button>
+  </header>
 
-  <div>
-    <label for="weekday">曜日:</label>
-    <select id="weekday">
-      <option value="月">月</option>
-      <option value="火">火</option>
-      <option value="水">水</option>
-      <option value="木">木</option>
-      <option value="金">金</option>
-      <option value="土">土</option>
-    </select>
+  <section class="legend">
+    <span class="legend-blue">青：空き</span>
+    <span class="legend-red">赤：使用中</span>
+  </section>
 
-    <label for="period">時限:</label>
-    <select id="period">
-      <option value="1">1限</option>
-      <option value="2">2限</option>
-      <option value="3">3限</option>
-      <option value="4">4限</option>
-      <option value="5">5限</option>
-    </select>
-
-    <label for="building">建物:</label>
-    <select id="building">
-      <option value="">すべて</option>
-      <option value="1号館">1号館</option>
-      <option value="2号館">2号館</option>
-      <option value="3号館">3号館</option>
-    </select>
-
-    <button onclick="fetchByFilter()">検索</button>
+<main class="building-list">
+  <button class="building-item" data-target="building1">1号館 <span class="arrow">▼</span></button>
+  <div class="building-detail" id="building1">
+    <p class="floor">1F</p>
+    <div class="rooms">
+      <span class="room red">114教室</span>
+      <span class="room red">117教室</span>
+      <span class="room blue">118教室</span>
+      <span class="room blue">ラボ1</span>
+      <span class="room blue">ラボ2</span>
+      <span class="room blue">ラボ3</span>
+    </div>
+    <p class="floor">2F</p>
+    <div class="rooms">
+      <span class="room red">121教室</span>
+      <span class="room red">122教室</span>
+      <span class="room blue">123教室</span>
+      <span class="room red">124教室</span>
+      <span class="room blue">125教室</span>
+    </div>
+    <p class="floor">3F</p>
+    <div class="rooms">
+      <span class="room red">131教室</span>
+      <span class="room red">132教室</span>
+      <span class="room blue">133教室</span>
+    </div>
   </div>
 
-  <ul id="classroom-list"></ul>
+  <!-- 他の号館も同様にbutton + div構造で続ける -->
+  <button class="building-item" data-target="building2">2号館 <span class="arrow">▼</span></button>
+  <div class="building-detail" id="building2"></div>
 
-  <script>
-    async function fetchByFilter() {
-      const weekday = document.getElementById("weekday").value;
-      const period = document.getElementById("period").value;
-      const building = document.getElementById("building").value;
+  <button class="building-item" data-target="building3">3号館 <span class="arrow">▼</span></button>
+  <div class="building-detail" id="building3"></div>
 
-      const url = new URL("/api/classrooms/available", window.location.origin);
-      url.searchParams.append("weekday", weekday);
-      url.searchParams.append("period", period);
-      if (building) url.searchParams.append("building", building);
+  <!-- 以下略 -->
+</main>
 
-      const res = await fetch(url);
-      const data = await res.json();
 
-      document.getElementById("title").textContent = `${weekday}曜 ${period}限 の空き教室`;
-      displayResults(data.results);
-    }
+  <!-- フィルターモーダル -->
+  <div class="modal-bg" id="filterModal">
+    <div class="filter-modal">
+      <button class="close-btn" id="closeFilter">×</button>
+      <h2>フィルタ</h2>
 
-    async function fetchCurrent() {
-      const res = await fetch("/api/classrooms/available/now");
-      if (res.status === 204) {
-        document.getElementById("title").textContent = "授業時間外です";
-        document.getElementById("classroom-list").innerHTML = "";
-        return;
-      }
-      const data = await res.json();
-      document.getElementById("weekday").value = data.weekday;
-      document.getElementById("period").value = data.period;
-      document.getElementById("building").value = "";
-      document.getElementById("title").textContent = `${data.weekday}曜 ${data.period}限 の空き教室`;
-      displayResults(data.results);
-    }
+      <label>号館
+        <select>
+          <option>選択</option>
+          <option>1号館</option>
+          <option>2号館</option>
+        </select>
+      </label>
 
-    function displayResults(results) {
-      const list = document.getElementById("classroom-list");
-      list.innerHTML = "";
+      <label>曜日
+        <select>
+          <option>選択</option>
+          <option>月</option>
+          <option>火</option>
+          <option>水</option>
+          <option>木</option>
+          <option>金</option>
+        </select>
+      </label>
 
-      if (results.length === 0) {
-        list.innerHTML = "<li>空き教室はありません</li>";
-        return;
-      }
+      <label>時限
+        <select>
+          <option>選択</option>
+          <option>1限</option>
+          <option>2限</option>
+          <option>3限</option>
+          <option>4限</option>
+          <option>5限</option>
+        </select>
+      </label>
 
-      results.forEach(room => {
-        const item = document.createElement("li");
-        item.textContent = `${room.name}（${room.building}, 定員 ${room.capacity}人）`;
-        list.appendChild(item);
-      });
-    }
+      <label class="checkbox-label">
+        <input type="checkbox">
+        授業中の教室を非表示
+      </label>
 
-    // ページロード時に現在の空き教室を表示
-    fetchCurrent();
-  </script>
+      <div class="filter-buttons">
+        <button class="clear-btn">全てクリア</button>
+        <button class="search-btn">検索</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
