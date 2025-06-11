@@ -1,202 +1,214 @@
 body {
-  font-family: "Kiwi Maru", "Helvetica Neue", sans-serif;
-  background-color: #fafff7;
-  margin: 0;
-  padding: 1.5rem 3rem;
-  color: #333;
+    font-family: "Kiwi Maru", "Helvetica Neue", sans-serif;
+    background-color: #fafff7;
+    margin: 0;
+    padding: 1.5rem 1.5rem;
+    color: #333;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 1.5rem;
-  color: #5a7753;
-  margin: 0;
-  letter-spacing: 0.2em;
-  text-align: center; 
+    font-size: 1.5rem;
+    color: #5a7753;
+    margin: 0;
+    letter-spacing: 0.2em;
+    text-align: center;
 }
 
+h2 {
+    font-size: 1.5rem;
+    color: #5a7753;
+    text-align: center;
+}
+
+
 .filter-btn {
-  background-color: transparent;
-  border: 2px solid #bcd8a8;
-  border-radius: 8px;
-  padding: 0.4em 0.6em;
-  font-size: 1.2rem;
-  color: #5a7753;
-  cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #bcd8a8;
+    border-radius: 8px;
+    padding: 0.4em 0.6em;
+    font-size: 1.2rem;
+    color: #5a7753;
+    cursor: pointer;
 }
 
 .legend {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 .legend-blue {
-  color: #5ba3cf;
+    color: #5ba3cf;
 }
 
 .legend-red {
-  color: #d88f98;
+    color: #d88f98;
 }
 
 .building-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .building-item {
-  font-family: "Kiwi Maru", sans-serif;
-  background-color: #e7f2dd;
-  border: none;
-  border-radius: 10px;
-  padding: 1rem;
-  font-size: 1.1rem;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #5a7753;
-  cursor: pointer;
+    font-family: "Kiwi Maru", sans-serif;
+    background-color: #e7f2dd;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5a7753;
+    cursor: pointer;
 }
 
 .arrow {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* 既存のスタイルの下に追加 */
 .modal-bg {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .filter-modal {
-  background: white;
-  border: 1px solid #a6c19a;
-  border-radius: 8px;
-  padding: 20px;
-  width: 80%;
-  max-width: 300px;
+    background: white;
+    border: 1px solid #a6c19a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
 }
 
 
 .filter-modal h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .filter-modal label {
-  display: block;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .filter-modal select {
-  width: 100%;
-  margin-top: 0.2rem;
-  padding: 0.4rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 0.2rem;
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .checkbox-label {
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .filter-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .clear-btn {
-  font-family: "Kiwi Maru", sans-serif;
-  background-color: #e0f0d5;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  color: #5a7753;
-  cursor: pointer;
+    font-family: "Kiwi Maru", sans-serif;
+    background-color: #e0f0d5;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #5a7753;
+    cursor: pointer;
 }
 
 .search-btn {
-  font-family: "Kiwi Maru", sans-serif;
-  background-color: #ffffff;
-  border: 2px solid #bcd8a8;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #5a7753;
-  cursor: pointer;
+    font-family: "Kiwi Maru", sans-serif;
+    background-color: #ffffff;
+    border: 2px solid #bcd8a8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #5a7753;
+    cursor: pointer;
 }
 
 .close-btn {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.6rem;
-  border: none;
-  background: none;
-  font-size: 1.2rem;
-  color: #5a7753;
-  cursor: pointer;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #5a7753;
+    cursor: pointer;
 }
 
 .building-detail {
-  display: none;
-  background: #ffffff;
-  border-left: 4px solid #d5e8c0;
-  padding: 1rem;
-  border-radius: 0 0 10px 10px;
-  margin-top: -0.5rem;
+    display: none;
+    background: #ffffff;
+    border-left: 4px solid #d5e8c0;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    margin-top: -0.5rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
 }
 
 .floor {
-  font-weight: bold;
-  font-size: 0.95rem;
-  color: #666;
-  margin: 0.6rem 0 0.2rem;
-  border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0.6rem 0 0.2rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .rooms {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
 }
 
 .room {
-  font-size: 0.8rem;
-  padding: 0.4em 0.8em;
-  border-radius: 20px;
-  background: #eee;
-  color: #444;
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    background: #eee;
+    color: #444;
 }
 
 .room.red {
-  background: #f2c5c9;
-  color: #7a2b2b;
+    background: #f2c5c9;
+    color: #7a2b2b;
 }
 
 .room.blue {
-  background: #b7dcee;
-  color: #1c5176;
+    background: #b7dcee;
+    color: #1c5176;
 }
