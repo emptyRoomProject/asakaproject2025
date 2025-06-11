@@ -13,12 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     });
 
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
     // 建物の開閉処理
     const buildingButtons = document.querySelectorAll(".building-item");
 
