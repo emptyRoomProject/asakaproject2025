@@ -1,5 +1,3 @@
-// Asapro2025_appNo1.js
-
 document.addEventListener("DOMContentLoaded", function () {
     const openBtn = document.getElementById("openFilter");
     const closeBtn = document.getElementById("closeFilter");
@@ -13,7 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     });
 
-    // 建物の開閉処理
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
     const buildingButtons = document.querySelectorAll(".building-item");
 
     buildingButtons.forEach(btn => {
@@ -22,21 +25,70 @@ document.addEventListener("DOMContentLoaded", function () {
             const detail = document.getElementById(targetId);
             const arrow = btn.querySelector(".arrow");
 
-            // 他の詳細を閉じる（開閉がトグル式ではなく単独表示したい場合）
-            document.querySelectorAll(".building-detail").forEach(div => {
-                if (div.id !== targetId) div.style.display = "none";
+            const isOpen = detail.classList.contains("open");
+
+            // すでに開いている要素を閉じる処理
+            document.querySelectorAll(".building-detail.open").forEach(openDetail => {
+                if (openDetail !== detail) {
+                    openDetail.style.maxHeight = openDetail.scrollHeight + "px"; // 一度設定しないとアニメが効かない
+                    requestAnimationFrame(() => {
+                        openDetail.style.maxHeight = "0px";
+                        openDetail.classList.remove("open"); // すぐには消さない
+                    });
+                }
             });
+
             document.querySelectorAll(".arrow").forEach(a => {
                 if (a !== arrow) a.textContent = "▼";
             });
 
-            if (detail.style.display === "block") {
-                detail.style.display = "none";
+            if (isOpen) {
+                // 閉じるアニメーション
+                detail.style.maxHeight = detail.scrollHeight + "px";
+                requestAnimationFrame(() => {
+                    detail.style.maxHeight = "0px";
+                });
+
+                detail.addEventListener("transitionend", function handler(e) {
+                    if (e.propertyName === "max-height") {
+                        detail.classList.remove("open");
+                        detail.removeEventListener("transitionend", handler);
+                    }
+                });
+
                 arrow.textContent = "▼";
             } else {
-                detail.style.display = "block";
+                // 開くアニメーション
+                detail.classList.add("open");
+                detail.style.maxHeight = detail.scrollHeight + "px";
                 arrow.textContent = "▲";
             }
         });
     });
+
+
+    function openDetail(element) {
+        // 最初に open クラスを追加してスタイル適用
+        element.classList.add("open");
+
+        // 一旦 max-height を auto にしてから、0 に戻す（リセット）
+        element.style.maxHeight = "0px";
+
+        // 少し待ってから scrollHeight を取得（スタイルが適用されるのを待つ）
+        setTimeout(() => {
+            const fullHeight = element.scrollHeight;
+            element.style.maxHeight = fullHeight + "px";
+        }, 50); // ← 50ms 待つと安定します（ブラウザによっては10msでもOKですが）
+    }
+
+    function closeDetail(element) {
+        // 高さを0に → CSSアニメーションが走る
+        element.style.maxHeight = "0px";
+
+        // アニメーション終了後に open クラスを外す（必要なら）
+        setTimeout(() => {
+            element.classList.remove("open");
+        }, 300); // ← CSSの transition の duration と合わせて！
+    }
+
 });
