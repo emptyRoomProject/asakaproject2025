@@ -175,9 +175,6 @@ h2 {
     padding: 1rem;
     border-radius: 0 0 10px 10px;
     margin-top: -0.5rem;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
 }
 
 .floor {
