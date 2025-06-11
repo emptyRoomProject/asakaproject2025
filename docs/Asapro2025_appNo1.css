@@ -25,7 +25,7 @@ header {
 h1 {
     font-size: 1.5rem;
     color: #5a7753;
-    margin: 0;
+    margin-right: 1rem;
     letter-spacing: 0.2em;
     text-align: center;
 }
@@ -36,15 +36,17 @@ h2 {
     text-align: center;
 }
 
-
 .filter-btn {
-    background-color: transparent;
-    border: 2px solid #bcd8a8;
+    background-color: #dee8d7;
+    border: 2px solid #e7f2dd;
     border-radius: 8px;
-    padding: 0.4em 0.6em;
-    font-size: 1.2rem;
-    color: #5a7753;
+    padding: 0.2rem 0.4rem;
+    margin-right: 1rem;
     cursor: pointer;
+}
+.logo_filter {
+  width: 35px;
+  height: auto;
 }
 
 .legend {
