@@ -11,12 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     });
 
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
     const buildingButtons = document.querySelectorAll(".building-item");
 
     buildingButtons.forEach(btn => {
