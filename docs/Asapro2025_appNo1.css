@@ -91,7 +91,6 @@ h2 {
     font-size: 1rem;
 }
 
-/* 既存のスタイルの下に追加 */
 .modal-bg {
     display: none;
     position: fixed;
@@ -185,14 +184,31 @@ h2 {
 }
 
 .building-detail {
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 1rem;
+    margin-top: 0;
+    transition:
+        max-height 0.35s linear,
+        padding 0.35s linear,
+        margin 0.35s linear,
+        opacity 0.25s linear;
     background: #ffffff;
     border-left: 4px solid #d5e8c0;
-    padding: 1rem;
     border-radius: 0 0 10px 10px;
-    margin-top: -0.5rem;
+    opacity: 0;
 }
 
+
+/* 開いている状態のとき */
+.building-detail.open {
+    max-height: 1000px;
+    /* JavaScriptでscrollHeight上書きするのでOK */
+    padding: 1rem;
+    /* ← 開いたときに元に戻す */
+    margin-top: -0.5rem;
+    opacity: 1;
+}
 .floor {
     font-weight: bold;
     font-size: 0.95rem;
