@@ -100,4 +100,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+        document.querySelectorAll('.filter-modal select').forEach(select => {
+        function updateSelectStyle() {
+            if (select.value === "選択") {
+                select.classList.add("default");
+                select.classList.remove("filled");
+            } else {
+                select.classList.add("filled");
+                select.classList.remove("default");
+            }
+        }
+
+        // 初期状態のチェック
+        updateSelectStyle();
+
+        // 選択が変更されたら見た目を更新
+        select.addEventListener("change", updateSelectStyle);
+    });
+
 });
