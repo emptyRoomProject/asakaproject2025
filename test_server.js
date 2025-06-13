@@ -2,18 +2,12 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
-
-dayjs.extend(utc);
-dayjs.extend(timezone);
 
 const app = express();
 const PORT = 3000;
 
 app.use(cors());
-app.use(express.static("docs")); // index.htmlなどを提供
+app.use(express.static("public")); // index.htmlなどを提供
 
 // データ読み込み
 const classrooms = JSON.parse(fs.readFileSync(path.join(__dirname, "data/classrooms.json")));
@@ -36,11 +30,11 @@ function toMinutes(timeStr) {
 
 // 現在の曜日と時限を取得
 function getCurrentWeekdayAndPeriod() {
-  const now = dayjs().tz("Asia/Tokyo");
-  const day = now.day(); // 0=日, 1=月, ..., 6=土
+  const now = new Date();
+  const day = now.getDay(); // 0=日, 1=月, ..., 6=土
   const weekdayMap = ["日", "月", "火", "水", "木", "金", "土"];
   let weekday = weekdayMap[day];
-  let minutesNow = now.hour() * 60 + now.minutes();
+  let minutesNow = now.getHours() * 60 + now.getMinutes();
 
   if (weekday === "日") {
     // 日曜は翌日のデータ（=月曜）を表示
@@ -65,7 +59,7 @@ function getCurrentWeekdayAndPeriod() {
 
 // ID配列から教室情報を取得
 function filterClassroomsByIds(ids) {
-  return classrooms.filter(c => ids.includes(c.id));
+  return classrooms.filter(c => ids.includes(String(c.id)));
 }
 
 // 空き教室IDを取得（"0" = 空き）
@@ -79,7 +73,7 @@ function getAvailableIds(weekday, period, building = null) {
     .map(([id]) => id)
     .filter(id => {
       if (!building) return true;
-      const room = classrooms.find(c => c.id === id);
+      const room = classrooms.find(c => String(c.id) === id);
       return room && room.building === building;
     });
 }
