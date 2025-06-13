@@ -85,4 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300); // ← CSSの transition の duration と合わせて！
     }
 
+    // 全てクリアボタンの処理
+    const clearBtn = document.querySelector(".clear-btn");
+
+    clearBtn.addEventListener("click", () => {
+        // select要素をすべて「選択」に戻す
+        document.querySelectorAll(".filter-modal select").forEach(select => {
+            select.selectedIndex = 0;
+        });
+
+        // チェックボックスをすべてオフにする
+        document.querySelectorAll(".filter-modal input[type='checkbox']").forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    });
+
 });
