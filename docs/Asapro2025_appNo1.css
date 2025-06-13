@@ -139,9 +139,33 @@ h2 {
 .filter-modal select {
     width: 100%;
     margin-top: 0.2rem;
-    padding: 0.4rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1.5px solid #bcd8a8;
+    background-color: #f9fff3;
+    font-family: "Kiwi Maru", sans-serif;
+    font-size: 0.95rem;
+    color: #5a7753;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="%235a7753" stroke-width="1.5" fill="none" fill-rule="evenodd"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+    background-size: 0.7em;
+}
+
+select.default {
+    background-color: #ffffff;
+    /* ← 白背景 */
+    color: #999;
+    /* 少しグレーで「未選択っぽく」 */
+}
+
+select.filled {
+    background-color: #f9fff3;
+    /* ← 通常の淡いグリーン */
+    color: #5a7753;
 }
 
 .checkbox-label {
@@ -159,13 +183,19 @@ h2 {
 
 .clear-btn {
     font-family: "Kiwi Maru", sans-serif;
-    background-color: #e0f0d5;
+    background-color: #ffffff;
     border: 2px solid #bcd8a8;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     font-size: 0.85rem;
     color: #5a7753;
     cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #f0f8e8;
+    color: #466440;
+    border-color: #a6c19a;
 }
 
 .search-btn {
@@ -177,6 +207,12 @@ h2 {
     font-weight: bold;
     color: #5a7753;
     cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #d0eac0;
+    color: #466440;
+    border-color: #a6c19a;
 }
 
 .close-btn {
