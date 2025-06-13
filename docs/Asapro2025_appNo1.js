@@ -118,4 +118,60 @@ document.addEventListener("DOMContentLoaded", function () {
         select.addEventListener("change", updateSelectStyle);
     });
 
+    // ヘッダーに曜日と時限の表示
+    const weekdays = ["日曜", "月曜", "火曜", "水曜", "木曜", "金曜", "土曜"];
+
+    function isWithinRange(hour, minute, startHour, startMinute, endHour, endMinute) {
+        const now = hour * 60 + minute;
+        const start = startHour * 60 + startMinute;
+        const end = endHour * 60 + endMinute;
+        return now >= start && now <= end;
+    }
+
+    function getPeriod() {
+        const now = new Date();
+        const dayLabel = weekdays[now.getDay()];
+        const h = now.getHours();
+        const m = now.getMinutes();
+
+        let periodLabel = "時間外"; // デフォルト
+
+        if (isWithinRange(h, m, 9, 0, 10, 30)) {
+            periodLabel = "１限";
+        } else if (isWithinRange(h, m, 10, 45, 12, 15)) {
+            periodLabel = "２限";
+        } else if (isWithinRange(h, m, 12, 16, 13, 4)) {
+            periodLabel = "昼休み";
+        } else if (isWithinRange(h, m, 13, 5, 14, 35)) {
+            periodLabel = "３限";
+        } else if (isWithinRange(h, m, 14, 50, 16, 20)) {
+            periodLabel = "４限";
+        } else if (isWithinRange(h, m, 16, 35, 18, 5)) {
+            periodLabel = "５限";
+        } else if (isWithinRange(h, m, 18, 15, 19, 45)) {
+            periodLabel = "６限";
+        } else if (
+            isWithinRange(h, m, 10, 31, 10, 44) ||
+            isWithinRange(h, m, 14, 36, 14, 49) ||
+            isWithinRange(h, m, 16, 21, 16, 34) ||
+            isWithinRange(h, m, 18, 6, 18, 14)
+        ) {
+            periodLabel = "休憩時間";
+        }
+    
+        return `${dayLabel}${periodLabel}`;
+    }
+
+    // ヘッダーのタイトル更新
+    function updateTitle() {
+        const headerTitle = document.querySelector('header h1');
+        if (headerTitle) {
+            headerTitle.textContent = getPeriod();
+        }
+    }
+    
+    updateTitle();
+
+    setInterval(updateTitle, 60000);
+
 });
