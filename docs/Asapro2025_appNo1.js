@@ -92,6 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // select要素をすべて「選択」に戻す
         document.querySelectorAll(".filter-modal select").forEach(select => {
             select.selectedIndex = 0;
+
+            // クラスも初期状態に戻す
+            select.classList.add("default");
+            select.classList.remove("filled");
         });
 
         // チェックボックスをすべてオフにする
