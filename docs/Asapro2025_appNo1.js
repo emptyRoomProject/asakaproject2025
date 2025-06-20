@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
     function openDetail(element) {
         // 最初に open クラスを追加してスタイル適用
         element.classList.add("open");
@@ -98,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-        document.querySelectorAll('.filter-modal select').forEach(select => {
+    document.querySelectorAll('.filter-modal select').forEach(select => {
         function updateSelectStyle() {
             if (select.value === "選択") {
                 select.classList.add("default");
@@ -156,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
             periodLabel = "休憩時間";
         }
-    
+
         return `${dayLabel}${periodLabel}`;
     }
 
@@ -167,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
             headerTitle.textContent = getPeriod();
         }
     }
-    
+
     updateTitle();
 
     setInterval(updateTitle, 60000);
