@@ -135,27 +135,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let periodLabel = "時間外"; // デフォルト
 
-        if (isWithinRange(h, m, 9, 0, 10, 30)) {
+        if (isWithinRange(h, m, 5, 0, 10, 30)) {
             periodLabel = "１限";
-        } else if (isWithinRange(h, m, 10, 45, 12, 15)) {
+        } else if (isWithinRange(h, m, 10, 31, 12, 15)) {
             periodLabel = "２限";
-        } else if (isWithinRange(h, m, 12, 16, 13, 4)) {
-            periodLabel = "昼休み";
-        } else if (isWithinRange(h, m, 13, 5, 14, 35)) {
+        } else if (isWithinRange(h, m, 12, 16, 14, 35)) {
             periodLabel = "３限";
-        } else if (isWithinRange(h, m, 14, 50, 16, 20)) {
+        } else if (isWithinRange(h, m, 14, 36, 16, 20)) {
             periodLabel = "４限";
-        } else if (isWithinRange(h, m, 16, 35, 18, 5)) {
+        } else if (isWithinRange(h, m, 16, 21, 18, 5)) {
             periodLabel = "５限";
-        } else if (isWithinRange(h, m, 18, 15, 19, 45)) {
+        } else if (isWithinRange(h, m, 18, 6, 19, 45)) {
             periodLabel = "６限";
-        } else if (
-            isWithinRange(h, m, 10, 31, 10, 44) ||
-            isWithinRange(h, m, 14, 36, 14, 49) ||
-            isWithinRange(h, m, 16, 21, 16, 34) ||
-            isWithinRange(h, m, 18, 6, 18, 14)
-        ) {
-            periodLabel = "休憩時間";
         }
 
         return `${dayLabel}${periodLabel}`;
