@@ -19,43 +19,37 @@ document.addEventListener("DOMContentLoaded", function () {
             const detail = document.getElementById(targetId);
             const arrow = btn.querySelector(".arrow");
 
-            const isOpen = detail.classList.contains("open");
+            const isVisible = detail.classList.contains("open");
 
-            // すでに開いている要素を閉じる処理
-            document.querySelectorAll(".building-detail.open").forEach(openDetail => {
-                if (openDetail !== detail) {
-                    openDetail.style.maxHeight = openDetail.scrollHeight + "px"; // 一度設定しないとアニメが効かない
-                    requestAnimationFrame(() => {
-                        openDetail.style.maxHeight = "0px";
-                        openDetail.classList.remove("open"); // すぐには消さない
-                    });
-                }
+            // 他の詳細を閉じる
+            document.querySelectorAll(".building-detail").forEach(div => {
+                div.classList.remove("open");
+                div.style.maxHeight = null;
+                div.style.opacity = 0;
             });
 
             document.querySelectorAll(".arrow").forEach(a => {
-                if (a !== arrow) a.textContent = "▼";
+                a.textContent = "▼";
             });
 
-            if (isOpen) {
-                // 閉じるアニメーション
-                detail.style.maxHeight = detail.scrollHeight + "px";
-                requestAnimationFrame(() => {
-                    detail.style.maxHeight = "0px";
-                });
-
-                detail.addEventListener("transitionend", function handler(e) {
-                    if (e.propertyName === "max-height") {
-                        detail.classList.remove("open");
-                        detail.removeEventListener("transitionend", handler);
-                    }
-                });
-
-                arrow.textContent = "▼";
-            } else {
-                // 開くアニメーション
+            if (!isVisible) {
                 detail.classList.add("open");
                 detail.style.maxHeight = detail.scrollHeight + "px";
+                detail.style.opacity = 1;
                 arrow.textContent = "▲";
+
+                // スクロールして詳細部分が見えるようにする（少し遅らせて）
+                setTimeout(() => {
+                    detail.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center" // or "nearest", "center" も調整可
+                    });
+                }, 50); // 開き始めて少ししてからスクロール
+            } else {
+                detail.classList.remove("open");
+                detail.style.maxHeight = null;
+                detail.style.opacity = 0;
+                arrow.textContent = "▼";
             }
         });
     });
