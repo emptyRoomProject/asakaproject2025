@@ -15,7 +15,7 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 .logo {
     width: 70px;
@@ -168,7 +168,7 @@ select.filled {
 }
 
 .checkbox-label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -186,7 +186,7 @@ select.filled {
     border: 2px solid #bcd8a8;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #5a7753;
     cursor: pointer;
 }
@@ -199,9 +199,10 @@ select.filled {
 
 .search-btn {
     font-family: "Kiwi Maru", sans-serif;
+    font-size: 0.95rem;
     background-color: #e0f0d5;
     border: 2px solid #bcd8a8;
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 5px;
     font-weight: bold;
     color: #5a7753;
@@ -255,7 +256,7 @@ select.filled {
     font-weight: bold;
     font-size: 0.95rem;
     color: #666;
-    margin: 0.6rem 0 0.2rem;
+    margin: 0.8rem 0 0.2rem;
     border-bottom: 1px solid #ccc;
 }
 
@@ -277,9 +278,11 @@ select.filled {
 .room.red {
     background: #f2c5c9;
     color: #7a2b2b;
+    font-size: 0.83rem;
 }
 
 .room.blue {
     background: #b7dcee;
     color: #1c5176;
+    font-size: 0.83rem;
 }
