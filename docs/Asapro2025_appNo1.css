@@ -60,10 +60,12 @@ h2 {
 
 .legend-blue {
     color: #5ba3cf;
+    font-size: 1rem;
 }
 
 .legend-red {
     color: #d88f98;
+    font-size: 1rem;
 }
 
 .building-list {
