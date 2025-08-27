@@ -272,6 +272,7 @@ h2 {
     font-size: 1.5rem;
     color: #6D7B60;
     text-align: center;
+    letter-spacing: 0.03em;
 }
 
 .close-btn {
@@ -430,6 +431,7 @@ h2 {
 
 .room {
     font-family: "Kiwi Maru", sans-serif;
+    letter-spacing: 0.03em;
     padding: 0.5em 1em;
     border-radius: 20px;
     margin-top: 0.25rem;
@@ -498,11 +500,16 @@ h2 {
 }
 
 .photo {
-
-    margin: 0 auto;
+    text-align: center;
+    margin: 30px auto 40px;
 }
 
 .room-photo {
     width: 250px;
     height: auto;
+}
+
+.detail {
+    width: 80%;
+    margin: 0 auto 20px;
 }
