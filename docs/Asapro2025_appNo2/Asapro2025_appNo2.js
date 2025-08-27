@@ -12,6 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     });
 
+    // 設定モーダルの開閉処理
+    const openSetting = document.getElementById("openSetting");
+    const closeSetting = document.getElementById("closeSetting");
+    const settingModal = document.getElementById("settingModal");
+
+    openSetting.addEventListener("click", () => {
+        settingModal.style.display = "flex";
+    });
+
+    closeSetting.addEventListener("click", () => {
+        settingModal.style.display = "none";
+    });
+
 
     // 114モーダルの開閉処理
     const open114 = document.getElementById("open114");
@@ -21,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open114.addEventListener("click", () => {
         detail114.style.display = "flex";
     });
-
     close114.addEventListener("click", () => {
         detail114.style.display = "none";
     });
@@ -34,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open117.addEventListener("click", () => {
         detail117.style.display = "flex";
     });
-
     close117.addEventListener("click", () => {
         detail117.style.display = "none";
     });
@@ -47,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open118.addEventListener("click", () => {
         detail118.style.display = "flex";
     });
-
     close118.addEventListener("click", () => {
         detail118.style.display = "none";
     });
@@ -60,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     openLabo1.addEventListener("click", () => {
         detailLabo1.style.display = "flex";
     });
-
     closeLabo1.addEventListener("click", () => {
         detailLabo1.style.display = "none";
     });
@@ -73,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     openLabo2.addEventListener("click", () => {
         detailLabo2.style.display = "flex";
     });
-
     closeLabo2.addEventListener("click", () => {
         detailLabo2.style.display = "none";
     });
@@ -86,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     openLabo3.addEventListener("click", () => {
         detailLabo3.style.display = "flex";
     });
-
     closeLabo3.addEventListener("click", () => {
         detailLabo3.style.display = "none";
     });
@@ -99,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open121.addEventListener("click", () => {
         detail121.style.display = "flex";
     });
-
     close121.addEventListener("click", () => {
         detail121.style.display = "none";
     });
@@ -112,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open122.addEventListener("click", () => {
         detail122.style.display = "flex";
     });
-
     close122.addEventListener("click", () => {
         detail122.style.display = "none";
     });
@@ -125,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open123.addEventListener("click", () => {
         detail123.style.display = "flex";
     });
-
     close123.addEventListener("click", () => {
         detail123.style.display = "none";
     });
@@ -138,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open124.addEventListener("click", () => {
         detail124.style.display = "flex";
     });
-
     close124.addEventListener("click", () => {
         detail124.style.display = "none";
     });
@@ -151,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open125.addEventListener("click", () => {
         detail125.style.display = "flex";
     });
-
     close125.addEventListener("click", () => {
         detail125.style.display = "none";
     });
@@ -164,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open131.addEventListener("click", () => {
         detail131.style.display = "flex";
     });
-
     close131.addEventListener("click", () => {
         detail131.style.display = "none";
     });
@@ -177,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open132.addEventListener("click", () => {
         detail132.style.display = "flex";
     });
-
     close132.addEventListener("click", () => {
         detail132.style.display = "none";
     });
@@ -190,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open133.addEventListener("click", () => {
         detail133.style.display = "flex";
     });
-
     close133.addEventListener("click", () => {
         detail133.style.display = "none";
     });
@@ -203,7 +202,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open201.addEventListener("click", () => {
         detail201.style.display = "flex";
     });
-
     close201.addEventListener("click", () => {
         detail201.style.display = "none";
     });
@@ -216,7 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open202.addEventListener("click", () => {
         detail202.style.display = "flex";
     });
-
     close202.addEventListener("click", () => {
         detail202.style.display = "none";
     });
@@ -229,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open211.addEventListener("click", () => {
         detail211.style.display = "flex";
     });
-
     close211.addEventListener("click", () => {
         detail211.style.display = "none";
     });
@@ -242,7 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open221.addEventListener("click", () => {
         detail221.style.display = "flex";
     });
-
     close221.addEventListener("click", () => {
         detail221.style.display = "none";
     });
@@ -255,7 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open222.addEventListener("click", () => {
         detail222.style.display = "flex";
     });
-
     close222.addEventListener("click", () => {
         detail222.style.display = "none";
     });
@@ -268,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open223.addEventListener("click", () => {
         detail223.style.display = "flex";
     });
-
     close223.addEventListener("click", () => {
         detail223.style.display = "none";
     });
@@ -281,7 +274,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open224.addEventListener("click", () => {
         detail224.style.display = "flex";
     });
-
     close224.addEventListener("click", () => {
         detail224.style.display = "none";
     });
@@ -294,7 +286,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open225.addEventListener("click", () => {
         detail225.style.display = "flex";
     });
-
     close225.addEventListener("click", () => {
         detail225.style.display = "none";
     });
@@ -307,7 +298,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open226.addEventListener("click", () => {
         detail226.style.display = "flex";
     });
-
     close226.addEventListener("click", () => {
         detail226.style.display = "none";
     });
@@ -320,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open227.addEventListener("click", () => {
         detail227.style.display = "flex";
     });
-
     close227.addEventListener("click", () => {
         detail227.style.display = "none";
     });
@@ -333,7 +322,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open331.addEventListener("click", () => {
         detail331.style.display = "flex";
     });
-
     close331.addEventListener("click", () => {
         detail331.style.display = "none";
     });
@@ -346,7 +334,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open332.addEventListener("click", () => {
         detail332.style.display = "flex";
     });
-
     close332.addEventListener("click", () => {
         detail332.style.display = "none";
     });
@@ -359,7 +346,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open333.addEventListener("click", () => {
         detail333.style.display = "flex";
     });
-
     close333.addEventListener("click", () => {
         detail333.style.display = "none";
     });
@@ -372,7 +358,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open334.addEventListener("click", () => {
         detail334.style.display = "flex";
     });
-
     close334.addEventListener("click", () => {
         detail334.style.display = "none";
     });
@@ -385,7 +370,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open335.addEventListener("click", () => {
         detail335.style.display = "flex";
     });
-
     close335.addEventListener("click", () => {
         detail335.style.display = "none";
     });
@@ -398,7 +382,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open336.addEventListener("click", () => {
         detail336.style.display = "flex";
     });
-
     close336.addEventListener("click", () => {
         detail336.style.display = "none";
     });
@@ -411,7 +394,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open337.addEventListener("click", () => {
         detail337.style.display = "flex";
     });
-
     close337.addEventListener("click", () => {
         detail337.style.display = "none";
     });
@@ -424,7 +406,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open338.addEventListener("click", () => {
         detail338.style.display = "flex";
     });
-
     close338.addEventListener("click", () => {
         detail338.style.display = "none";
     });
@@ -437,7 +418,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open339.addEventListener("click", () => {
         detail339.style.display = "flex";
     });
-
     close339.addEventListener("click", () => {
         detail339.style.display = "none";
     });
@@ -450,7 +430,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open410.addEventListener("click", () => {
         detail410.style.display = "flex";
     });
-
     close410.addEventListener("click", () => {
         detail410.style.display = "none";
     });
@@ -463,7 +442,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open420.addEventListener("click", () => {
         detail420.style.display = "flex";
     });
-
     close420.addEventListener("click", () => {
         detail420.style.display = "none";
     });
@@ -476,7 +454,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open421.addEventListener("click", () => {
         detail421.style.display = "flex";
     });
-
     close421.addEventListener("click", () => {
         detail421.style.display = "none";
     });
@@ -489,7 +466,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open422.addEventListener("click", () => {
         detail422.style.display = "flex";
     });
-
     close422.addEventListener("click", () => {
         detail422.style.display = "none";
     });
@@ -502,7 +478,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open423.addEventListener("click", () => {
         detail423.style.display = "flex";
     });
-
     close423.addEventListener("click", () => {
         detail423.style.display = "none";
     });
@@ -515,7 +490,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open424.addEventListener("click", () => {
         detail424.style.display = "flex";
     });
-
     close424.addEventListener("click", () => {
         detail424.style.display = "none";
     });
@@ -528,7 +502,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open425.addEventListener("click", () => {
         detail425.style.display = "flex";
     });
-
     close425.addEventListener("click", () => {
         detail425.style.display = "none";
     });
@@ -541,7 +514,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open426.addEventListener("click", () => {
         detail426.style.display = "flex";
     });
-
     close426.addEventListener("click", () => {
         detail426.style.display = "none";
     });
@@ -554,7 +526,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open427.addEventListener("click", () => {
         detail427.style.display = "flex";
     });
-
     close427.addEventListener("click", () => {
         detail427.style.display = "none";
     });
@@ -567,7 +538,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open428.addEventListener("click", () => {
         detail428.style.display = "flex";
     });
-
     close428.addEventListener("click", () => {
         detail428.style.display = "none";
     });
@@ -580,7 +550,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open429.addEventListener("click", () => {
         detail429.style.display = "flex";
     });
-
     close429.addEventListener("click", () => {
         detail429.style.display = "none";
     });
@@ -593,7 +562,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open44a.addEventListener("click", () => {
         detail44a.style.display = "flex";
     });
-
     close44a.addEventListener("click", () => {
         detail44a.style.display = "none";
     });
@@ -606,7 +574,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open44b.addEventListener("click", () => {
         detail44b.style.display = "flex";
     });
-
     close44b.addEventListener("click", () => {
         detail44b.style.display = "none";
     });
@@ -619,7 +586,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open511.addEventListener("click", () => {
         detail511.style.display = "flex";
     });
-
     close511.addEventListener("click", () => {
         detail511.style.display = "none";
     });
@@ -632,7 +598,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open521.addEventListener("click", () => {
         detail521.style.display = "flex";
     });
-
     close521.addEventListener("click", () => {
         detail521.style.display = "none";
     });
@@ -645,7 +610,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open522.addEventListener("click", () => {
         detail522.style.display = "flex";
     });
-
     close522.addEventListener("click", () => {
         detail522.style.display = "none";
     });
@@ -658,7 +622,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open523.addEventListener("click", () => {
         detail523.style.display = "flex";
     });
-
     close523.addEventListener("click", () => {
         detail523.style.display = "none";
     });
@@ -671,7 +634,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open524.addEventListener("click", () => {
         detail524.style.display = "flex";
     });
-
     close524.addEventListener("click", () => {
         detail524.style.display = "none";
     });
@@ -684,7 +646,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open525.addEventListener("click", () => {
         detail525.style.display = "flex";
     });
-
     close525.addEventListener("click", () => {
         detail525.style.display = "none";
     });
@@ -697,7 +658,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open526.addEventListener("click", () => {
         detail526.style.display = "flex";
     });
-
     close526.addEventListener("click", () => {
         detail526.style.display = "none";
     });
@@ -710,7 +670,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open527.addEventListener("click", () => {
         detail527.style.display = "flex";
     });
-
     close527.addEventListener("click", () => {
         detail527.style.display = "none";
     });
@@ -723,7 +682,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open528.addEventListener("click", () => {
         detail528.style.display = "flex";
     });
-
     close528.addEventListener("click", () => {
         detail528.style.display = "none";
     });
@@ -736,7 +694,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open51.addEventListener("click", () => {
         detail51.style.display = "flex";
     });
-
     close51.addEventListener("click", () => {
         detail51.style.display = "none";
     });
@@ -749,7 +706,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open52.addEventListener("click", () => {
         detail52.style.display = "flex";
     });
-
     close52.addEventListener("click", () => {
         detail52.style.display = "none";
     });
@@ -762,7 +718,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open53.addEventListener("click", () => {
         detail53.style.display = "flex";
     });
-
     close53.addEventListener("click", () => {
         detail53.style.display = "none";
     });
@@ -775,7 +730,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open54.addEventListener("click", () => {
         detail54.style.display = "flex";
     });
-
     close54.addEventListener("click", () => {
         detail54.style.display = "none";
     });
@@ -788,7 +742,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open55.addEventListener("click", () => {
         detail55.style.display = "flex";
     });
-
     close55.addEventListener("click", () => {
         detail55.style.display = "none";
     });
@@ -801,7 +754,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open56.addEventListener("click", () => {
         detail56.style.display = "flex";
     });
-
     close56.addEventListener("click", () => {
         detail56.style.display = "none";
     });
@@ -814,7 +766,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open701.addEventListener("click", () => {
         detail701.style.display = "flex";
     });
-
     close701.addEventListener("click", () => {
         detail701.style.display = "none";
     });
@@ -827,7 +778,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open702.addEventListener("click", () => {
         detail702.style.display = "flex";
     });
-
     close702.addEventListener("click", () => {
         detail702.style.display = "none";
     });
@@ -840,7 +790,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open711.addEventListener("click", () => {
         detail711.style.display = "flex";
     });
-
     close711.addEventListener("click", () => {
         detail711.style.display = "none";
     });
@@ -853,7 +802,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open712.addEventListener("click", () => {
         detail712.style.display = "flex";
     });
-
     close712.addEventListener("click", () => {
         detail712.style.display = "none";
     });
@@ -866,7 +814,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open713.addEventListener("click", () => {
         detail713.style.display = "flex";
     });
-
     close713.addEventListener("click", () => {
         detail713.style.display = "none";
     });
@@ -879,7 +826,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open714.addEventListener("click", () => {
         detail714.style.display = "flex";
     });
-
     close714.addEventListener("click", () => {
         detail714.style.display = "none";
     });
@@ -892,7 +838,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open721.addEventListener("click", () => {
         detail721.style.display = "flex";
     });
-
     close721.addEventListener("click", () => {
         detail721.style.display = "none";
     });
@@ -905,7 +850,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open722.addEventListener("click", () => {
         detail722.style.display = "flex";
     });
-
     close722.addEventListener("click", () => {
         detail722.style.display = "none";
     });
@@ -918,7 +862,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open723.addEventListener("click", () => {
         detail723.style.display = "flex";
     });
-
     close723.addEventListener("click", () => {
         detail723.style.display = "none";
     });
@@ -931,7 +874,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open724.addEventListener("click", () => {
         detail724.style.display = "flex";
     });
-
     close724.addEventListener("click", () => {
         detail724.style.display = "none";
     });
@@ -944,7 +886,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open725.addEventListener("click", () => {
         detail725.style.display = "flex";
     });
-
     close725.addEventListener("click", () => {
         detail725.style.display = "none";
     });
@@ -957,7 +898,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open70.addEventListener("click", () => {
         detail70.style.display = "flex";
     });
-
     close70.addEventListener("click", () => {
         detail70.style.display = "none";
     });
@@ -970,7 +910,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open71.addEventListener("click", () => {
         detail71.style.display = "flex";
     });
-
     close71.addEventListener("click", () => {
         detail71.style.display = "none";
     });
@@ -983,7 +922,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open72.addEventListener("click", () => {
         detail72.style.display = "flex";
     });
-
     close72.addEventListener("click", () => {
         detail72.style.display = "none";
     });
@@ -996,7 +934,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open73.addEventListener("click", () => {
         detail73.style.display = "flex";
     });
-
     close73.addEventListener("click", () => {
         detail73.style.display = "none";
     });
@@ -1009,7 +946,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open74.addEventListener("click", () => {
         detail74.style.display = "flex";
     });
-
     close74.addEventListener("click", () => {
         detail74.style.display = "none";
     });
@@ -1022,7 +958,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open75.addEventListener("click", () => {
         detail75.style.display = "flex";
     });
-
     close75.addEventListener("click", () => {
         detail75.style.display = "none";
     });
@@ -1035,7 +970,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open76.addEventListener("click", () => {
         detail76.style.display = "flex";
     });
-
     close76.addEventListener("click", () => {
         detail76.style.display = "none";
     });
@@ -1048,7 +982,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open77.addEventListener("click", () => {
         detail77.style.display = "flex";
     });
-
     close77.addEventListener("click", () => {
         detail77.style.display = "none";
     });
@@ -1061,7 +994,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open78.addEventListener("click", () => {
         detail78.style.display = "flex";
     });
-
     close78.addEventListener("click", () => {
         detail78.style.display = "none";
     });
@@ -1074,7 +1006,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open79.addEventListener("click", () => {
         detail79.style.display = "flex";
     });
-
     close79.addEventListener("click", () => {
         detail79.style.display = "none";
     });
@@ -1087,7 +1018,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open811.addEventListener("click", () => {
         detail811.style.display = "flex";
     });
-
     close811.addEventListener("click", () => {
         detail811.style.display = "none";
     });
@@ -1100,7 +1030,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open812.addEventListener("click", () => {
         detail812.style.display = "flex";
     });
-
     close812.addEventListener("click", () => {
         detail812.style.display = "none";
     });
@@ -1113,7 +1042,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open813.addEventListener("click", () => {
         detail813.style.display = "flex";
     });
-
     close813.addEventListener("click", () => {
         detail813.style.display = "none";
     });
@@ -1126,7 +1054,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open814.addEventListener("click", () => {
         detail814.style.display = "flex";
     });
-
     close814.addEventListener("click", () => {
         detail814.style.display = "none";
     });
@@ -1139,7 +1066,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open821.addEventListener("click", () => {
         detail821.style.display = "flex";
     });
-
     close821.addEventListener("click", () => {
         detail821.style.display = "none";
     });
@@ -1152,7 +1078,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open822.addEventListener("click", () => {
         detail822.style.display = "flex";
     });
-
     close822.addEventListener("click", () => {
         detail822.style.display = "none";
     });
@@ -1165,7 +1090,6 @@ document.addEventListener("DOMContentLoaded", function () {
     open823.addEventListener("click", () => {
         detail823.style.display = "flex";
     });
-
     close823.addEventListener("click", () => {
         detail823.style.display = "none";
     });
@@ -1178,9 +1102,1232 @@ document.addEventListener("DOMContentLoaded", function () {
     open824.addEventListener("click", () => {
         detail824.style.display = "flex";
     });
-
     close824.addEventListener("click", () => {
         detail824.style.display = "none";
+    });
+
+    // TanmatsuAモーダルの開閉処理
+    const openTanmatsuA = document.getElementById("openTanmatsuA");
+    const closeTanmatsuA = document.getElementById("closeTanmatsuA");
+    const detailTanmatsuA = document.getElementById("detailTanmatsuA");
+
+    openTanmatsuA.addEventListener("click", () => {
+        detailTanmatsuA.style.display = "flex";
+    });
+    closeTanmatsuA.addEventListener("click", () => {
+        detailTanmatsuA.style.display = "none";
+    });
+
+    // TanmatsuBモーダルの開閉処理
+    const openTanmatsuB = document.getElementById("openTanmatsuB");
+    const closeTanmatsuB = document.getElementById("closeTanmatsuB");
+    const detailTanmatsuB = document.getElementById("detailTanmatsuB");
+
+    openTanmatsuB.addEventListener("click", () => {
+        detailTanmatsuB.style.display = "flex";
+    });
+    closeTanmatsuB.addEventListener("click", () => {
+        detailTanmatsuB.style.display = "none";
+    });
+
+    // TanmatsuCモーダルの開閉処理
+    const openTanmatsuC = document.getElementById("openTanmatsuC");
+    const closeTanmatsuC = document.getElementById("closeTanmatsuC");
+    const detailTanmatsuC = document.getElementById("detailTanmatsuC");
+
+    openTanmatsuC.addEventListener("click", () => {
+        detailTanmatsuC.style.display = "flex";
+    });
+    closeTanmatsuC.addEventListener("click", () => {
+        detailTanmatsuC.style.display = "none";
+    });
+
+    // TanmatsuDモーダルの開閉処理
+    const openTanmatsuD = document.getElementById("openTanmatsuD");
+    const closeTanmatsuD = document.getElementById("closeTanmatsuD");
+    const detailTanmatsuD = document.getElementById("detailTanmatsuD");
+
+    openTanmatsuD.addEventListener("click", () => {
+        detailTanmatsuD.style.display = "flex";
+    });
+    closeTanmatsuD.addEventListener("click", () => {
+        detailTanmatsuD.style.display = "none";
+    });
+
+    // TanmatsuEモーダルの開閉処理
+    const openTanmatsuE = document.getElementById("openTanmatsuE");
+    const closeTanmatsuE = document.getElementById("closeTanmatsuE");
+    const detailTanmatsuE = document.getElementById("detailTanmatsuE");
+
+    openTanmatsuE.addEventListener("click", () => {
+        detailTanmatsuE.style.display = "flex";
+    });
+    closeTanmatsuE.addEventListener("click", () => {
+        detailTanmatsuE.style.display = "none";
+    });
+
+    // TanmatsuFモーダルの開閉処理
+    const openTanmatsuF = document.getElementById("openTanmatsuF");
+    const closeTanmatsuF = document.getElementById("closeTanmatsuF");
+    const detailTanmatsuF = document.getElementById("detailTanmatsuF");
+
+    openTanmatsuF.addEventListener("click", () => {
+        detailTanmatsuF.style.display = "flex";
+    });
+    closeTanmatsuF.addEventListener("click", () => {
+        detailTanmatsuF.style.display = "none";
+    });
+
+    // 95aモーダルの開閉処理
+    const open95a = document.getElementById("open95a");
+    const close95a = document.getElementById("close95a");
+    const detail95a = document.getElementById("detail95a");
+
+    open95a.addEventListener("click", () => {
+        detail95a.style.display = "flex";
+    });
+    close95a.addEventListener("click", () => {
+        detail95a.style.display = "none";
+    });
+
+    // 95bモーダルの開閉処理
+    const open95b = document.getElementById("open95b");
+    const close95b = document.getElementById("close95b");
+    const detail95b = document.getElementById("detail95b");
+
+    open95b.addEventListener("click", () => {
+        detail95b.style.display = "flex";
+    });
+    close95b.addEventListener("click", () => {
+        detail95b.style.display = "none";
+    });
+
+    // 95cモーダルの開閉処理
+    const open95c = document.getElementById("open95c");
+    const close95c = document.getElementById("close95c");
+    const detail95c = document.getElementById("detail95c");
+
+    open95c.addEventListener("click", () => {
+        detail95c.style.display = "flex";
+    });
+    close95c.addEventListener("click", () => {
+        detail95c.style.display = "none";
+    });
+
+    // 95dモーダルの開閉処理
+    const open95d = document.getElementById("open95d");
+    const close95d = document.getElementById("close95d");
+    const detail95d = document.getElementById("detail95d");
+
+    open95d.addEventListener("click", () => {
+        detail95d.style.display = "flex";
+    });
+    close95d.addEventListener("click", () => {
+        detail95d.style.display = "none";
+    });
+
+    // 95eモーダルの開閉処理
+    const open95e = document.getElementById("open95e");
+    const close95e = document.getElementById("close95e");
+    const detail95e = document.getElementById("detail95e");
+
+    open95e.addEventListener("click", () => {
+        detail95e.style.display = "flex";
+    });
+    close95e.addEventListener("click", () => {
+        detail95e.style.display = "none";
+    });
+
+    // 95fモーダルの開閉処理
+    const open95f = document.getElementById("open95f");
+    const close95f = document.getElementById("close95f");
+    const detail95f = document.getElementById("detail95f");
+
+    open95f.addEventListener("click", () => {
+        detail95f.style.display = "flex";
+    });
+    close95f.addEventListener("click", () => {
+        detail95f.style.display = "none";
+    });
+
+    // 95gモーダルの開閉処理
+    const open95g = document.getElementById("open95g");
+    const close95g = document.getElementById("close95g");
+    const detail95g = document.getElementById("detail95g");
+
+    open95g.addEventListener("click", () => {
+        detail95g.style.display = "flex";
+    });
+    close95g.addEventListener("click", () => {
+        detail95g.style.display = "none";
+    });
+
+    // 95hモーダルの開閉処理
+    const open95h = document.getElementById("open95h");
+    const close95h = document.getElementById("close95h");
+    const detail95h = document.getElementById("detail95h");
+
+    open95h.addEventListener("click", () => {
+        detail95h.style.display = "flex";
+    });
+    close95h.addEventListener("click", () => {
+        detail95h.style.display = "none";
+    });
+
+    // 95iモーダルの開閉処理
+    const open95i = document.getElementById("open95i");
+    const close95i = document.getElementById("close95i");
+    const detail95i = document.getElementById("detail95i");
+
+    open95i.addEventListener("click", () => {
+        detail95i.style.display = "flex";
+    });
+    close95i.addEventListener("click", () => {
+        detail95i.style.display = "none";
+    });
+
+    // 95jモーダルの開閉処理
+    const open95j = document.getElementById("open95j");
+    const close95j = document.getElementById("close95j");
+    const detail95j = document.getElementById("detail95j");
+
+    open95j.addEventListener("click", () => {
+        detail95j.style.display = "flex";
+    });
+    close95j.addEventListener("click", () => {
+        detail95j.style.display = "none";
+    });
+
+    // 961モーダルの開閉処理
+    const open961 = document.getElementById("open961");
+    const close961 = document.getElementById("close961");
+    const detail961 = document.getElementById("detail961");
+
+    open961.addEventListener("click", () => {
+        detail961.style.display = "flex";
+    });
+    close961.addEventListener("click", () => {
+        detail961.style.display = "none";
+    });
+
+    // 962モーダルの開閉処理
+    const open962 = document.getElementById("open962");
+    const close962 = document.getElementById("close962");
+    const detail962 = document.getElementById("detail962");
+
+    open962.addEventListener("click", () => {
+        detail962.style.display = "flex";
+    });
+    close962.addEventListener("click", () => {
+        detail962.style.display = "none";
+    });
+
+    // 963モーダルの開閉処理
+    const open963 = document.getElementById("open963");
+    const close963 = document.getElementById("close963");
+    const detail963 = document.getElementById("detail963");
+
+    open963.addEventListener("click", () => {
+        detail963.style.display = "flex";
+    });
+    close963.addEventListener("click", () => {
+        detail963.style.display = "none";
+    });
+
+    // 964モーダルの開閉処理
+    const open964 = document.getElementById("open964");
+    const close964 = document.getElementById("close964");
+    const detail964 = document.getElementById("detail964");
+
+    open964.addEventListener("click", () => {
+        detail964.style.display = "flex";
+    });
+    close964.addEventListener("click", () => {
+        detail964.style.display = "none";
+    });
+
+    // 965モーダルの開閉処理
+    const open965 = document.getElementById("open965");
+    const close965 = document.getElementById("close965");
+    const detail965 = document.getElementById("detail965");
+
+    open965.addEventListener("click", () => {
+        detail965.style.display = "flex";
+    });
+    close965.addEventListener("click", () => {
+        detail965.style.display = "none";
+    });
+
+    // 966モーダルの開閉処理
+    const open966 = document.getElementById("open966");
+    const close966 = document.getElementById("close966");
+    const detail966 = document.getElementById("detail966");
+
+    open966.addEventListener("click", () => {
+        detail966.style.display = "flex";
+    });
+    close966.addEventListener("click", () => {
+        detail966.style.display = "none";
+    });
+
+    // 967モーダルの開閉処理
+    const open967 = document.getElementById("open967");
+    const close967 = document.getElementById("close967");
+    const detail967 = document.getElementById("detail967");
+
+    open967.addEventListener("click", () => {
+        detail967.style.display = "flex";
+    });
+    close967.addEventListener("click", () => {
+        detail967.style.display = "none";
+    });
+
+    // 968モーダルの開閉処理
+    const open968 = document.getElementById("open968");
+    const close968 = document.getElementById("close968");
+    const detail968 = document.getElementById("detail968");
+
+    open968.addEventListener("click", () => {
+        detail968.style.display = "flex";
+    });
+    close968.addEventListener("click", () => {
+        detail968.style.display = "none";
+    });
+
+    // 971モーダルの開閉処理
+    const open971 = document.getElementById("open971");
+    const close971 = document.getElementById("close971");
+    const detail971 = document.getElementById("detail971");
+
+    open971.addEventListener("click", () => {
+        detail971.style.display = "flex";
+    });
+    close971.addEventListener("click", () => {
+        detail971.style.display = "none";
+    });
+
+    // 972モーダルの開閉処理
+    const open972 = document.getElementById("open972");
+    const close972 = document.getElementById("close972");
+    const detail972 = document.getElementById("detail972");
+
+    open972.addEventListener("click", () => {
+        detail972.style.display = "flex";
+    });
+    close972.addEventListener("click", () => {
+        detail972.style.display = "none";
+    });
+
+    // 973モーダルの開閉処理
+    const open973 = document.getElementById("open973");
+    const close973 = document.getElementById("close973");
+    const detail973 = document.getElementById("detail973");
+
+    open973.addEventListener("click", () => {
+        detail973.style.display = "flex";
+    });
+    close973.addEventListener("click", () => {
+        detail973.style.display = "none";
+    });
+
+    // 974モーダルの開閉処理
+    const open974 = document.getElementById("open974");
+    const close974 = document.getElementById("close974");
+    const detail974 = document.getElementById("detail974");
+
+    open974.addEventListener("click", () => {
+        detail974.style.display = "flex";
+    });
+    close974.addEventListener("click", () => {
+        detail974.style.display = "none";
+    });
+
+    // 975モーダルの開閉処理
+    const open975 = document.getElementById("open975");
+    const close975 = document.getElementById("close975");
+    const detail975 = document.getElementById("detail975");
+
+    open975.addEventListener("click", () => {
+        detail975.style.display = "flex";
+    });
+    close975.addEventListener("click", () => {
+        detail975.style.display = "none";
+    });
+
+    // 976モーダルの開閉処理
+    const open976 = document.getElementById("open976");
+    const close976 = document.getElementById("close976");
+    const detail976 = document.getElementById("detail976");
+
+    open976.addEventListener("click", () => {
+        detail976.style.display = "flex";
+    });
+    close976.addEventListener("click", () => {
+        detail976.style.display = "none";
+    });
+
+    // 977モーダルの開閉処理
+    const open977 = document.getElementById("open977");
+    const close977 = document.getElementById("close977");
+    const detail977 = document.getElementById("detail977");
+
+    open977.addEventListener("click", () => {
+        detail977.style.display = "flex";
+    });
+    close977.addEventListener("click", () => {
+        detail977.style.display = "none";
+    });
+
+    // 978モーダルの開閉処理
+    const open978 = document.getElementById("open978");
+    const close978 = document.getElementById("close978");
+    const detail978 = document.getElementById("detail978");
+
+    open978.addEventListener("click", () => {
+        detail978.style.display = "flex";
+    });
+    close978.addEventListener("click", () => {
+        detail978.style.display = "none";
+    });
+
+    // 979モーダルの開閉処理
+    const open979 = document.getElementById("open979");
+    const close979 = document.getElementById("close979");
+    const detail979 = document.getElementById("detail979");
+
+    open979.addEventListener("click", () => {
+        detail979.style.display = "flex";
+    });
+    close979.addEventListener("click", () => {
+        detail979.style.display = "none";
+    });
+
+    // 98aモーダルの開閉処理
+    const open98a = document.getElementById("open98a");
+    const close98a = document.getElementById("close98a");
+    const detail98a = document.getElementById("detail98a");
+
+    open98a.addEventListener("click", () => {
+        detail98a.style.display = "flex";
+    });
+    close98a.addEventListener("click", () => {
+        detail98a.style.display = "none";
+    });
+
+    // 98bモーダルの開閉処理
+    const open98b = document.getElementById("open98b");
+    const close98b = document.getElementById("close98b");
+    const detail98b = document.getElementById("detail98b");
+
+    open98b.addEventListener("click", () => {
+        detail98b.style.display = "flex";
+    });
+    close98b.addEventListener("click", () => {
+        detail98b.style.display = "none";
+    });
+
+    // 98cモーダルの開閉処理
+    const open98c = document.getElementById("open98c");
+    const close98c = document.getElementById("close98c");
+    const detail98c = document.getElementById("detail98c");
+
+    open98c.addEventListener("click", () => {
+        detail98c.style.display = "flex";
+    });
+    close98c.addEventListener("click", () => {
+        detail98c.style.display = "none";
+    });
+
+    // 98fモーダルの開閉処理
+    const open98f = document.getElementById("open98f");
+    const close98f = document.getElementById("close98f");
+    const detail98f = document.getElementById("detail98f");
+
+    open98f.addEventListener("click", () => {
+        detail98f.style.display = "flex";
+    });
+    close98f.addEventListener("click", () => {
+        detail98f.style.display = "none";
+    });
+
+    // 101aモーダルの開閉処理
+    const open101a = document.getElementById("open101a");
+    const close101a = document.getElementById("close101a");
+    const detail101a = document.getElementById("detail101a");
+
+    open101a.addEventListener("click", () => {
+        detail101a.style.display = "flex";
+    });
+    close101a.addEventListener("click", () => {
+        detail101a.style.display = "none";
+    });
+
+    // 101bモーダルの開閉処理
+    const open101b = document.getElementById("open101b");
+    const close101b = document.getElementById("close101b");
+    const detail101b = document.getElementById("detail101b");
+
+    open101b.addEventListener("click", () => {
+        detail101b.style.display = "flex";
+    });
+    close101b.addEventListener("click", () => {
+        detail101b.style.display = "none";
+    });
+
+    // 101cモーダルの開閉処理
+    const open101c = document.getElementById("open101c");
+    const close101c = document.getElementById("close101c");
+    const detail101c = document.getElementById("detail101c");
+
+    open101c.addEventListener("click", () => {
+        detail101c.style.display = "flex";
+    });
+    close101c.addEventListener("click", () => {
+        detail101c.style.display = "none";
+    });
+
+    // 101dモーダルの開閉処理
+    const open101d = document.getElementById("open101d");
+    const close101d = document.getElementById("close101d");
+    const detail101d = document.getElementById("detail101d");
+
+    open101d.addEventListener("click", () => {
+        detail101d.style.display = "flex";
+    });
+    close101d.addEventListener("click", () => {
+        detail101d.style.display = "none";
+    });
+
+    // 101eモーダルの開閉処理
+    const open101e = document.getElementById("open101e");
+    const close101e = document.getElementById("close101e");
+    const detail101e = document.getElementById("detail101e");
+
+    open101e.addEventListener("click", () => {
+        detail101e.style.display = "flex";
+    });
+    close101e.addEventListener("click", () => {
+        detail101e.style.display = "none";
+    });
+
+    // 101fモーダルの開閉処理
+    const open101f = document.getElementById("open101f");
+    const close101f = document.getElementById("close101f");
+    const detail101f = document.getElementById("detail101f");
+
+    open101f.addEventListener("click", () => {
+        detail101f.style.display = "flex";
+    });
+    close101f.addEventListener("click", () => {
+        detail101f.style.display = "none";
+    });
+
+    // 101gモーダルの開閉処理
+    const open101g = document.getElementById("open101g");
+    const close101g = document.getElementById("close101g");
+    const detail101g = document.getElementById("detail101g");
+
+    open101g.addEventListener("click", () => {
+        detail101g.style.display = "flex";
+    });
+    close101g.addEventListener("click", () => {
+        detail101g.style.display = "none";
+    });
+
+    // 101hモーダルの開閉処理
+    const open101h = document.getElementById("open101h");
+    const close101h = document.getElementById("close101h");
+    const detail101h = document.getElementById("detail101h");
+
+    open101h.addEventListener("click", () => {
+        detail101h.style.display = "flex";
+    });
+    close101h.addEventListener("click", () => {
+        detail101h.style.display = "none";
+    });
+
+    // 10101モーダルの開閉処理
+    const open10101 = document.getElementById("open10101");
+    const close10101 = document.getElementById("close10101");
+    const detail10101 = document.getElementById("detail10101");
+
+    open10101.addEventListener("click", () => {
+        detail10101.style.display = "flex";
+    });
+    close10101.addEventListener("click", () => {
+        detail10101.style.display = "none";
+    });
+
+    // 10102モーダルの開閉処理
+    const open10102 = document.getElementById("open10102");
+    const close10102 = document.getElementById("close10102");
+    const detail10102 = document.getElementById("detail10102");
+
+    open10102.addEventListener("click", () => {
+        detail10102.style.display = "flex";
+    });
+    close10102.addEventListener("click", () => {
+        detail10102.style.display = "none";
+    });
+
+    // 10103モーダルの開閉処理
+    const open10103 = document.getElementById("open10103");
+    const close10103 = document.getElementById("close10103");
+    const detail10103 = document.getElementById("detail10103");
+
+    open10103.addEventListener("click", () => {
+        detail10103.style.display = "flex";
+    });
+    close10103.addEventListener("click", () => {
+        detail10103.style.display = "none";
+    });
+
+    // 10201モーダルの開閉処理
+    const open10201 = document.getElementById("open10201");
+    const close10201 = document.getElementById("close10201");
+    const detail10201 = document.getElementById("detail10201");
+
+    open10201.addEventListener("click", () => {
+        detail10201.style.display = "flex";
+    });
+    close10201.addEventListener("click", () => {
+        detail10201.style.display = "none";
+    });
+
+    // 10202モーダルの開閉処理
+    const open10202 = document.getElementById("open10202");
+    const close10202 = document.getElementById("close10202");
+    const detail10202 = document.getElementById("detail10202");
+
+    open10202.addEventListener("click", () => {
+        detail10202.style.display = "flex";
+    });
+    close10202.addEventListener("click", () => {
+        detail10202.style.display = "none";
+    });
+
+    // 10203モーダルの開閉処理
+    const open10203 = document.getElementById("open10203");
+    const close10203 = document.getElementById("close10203");
+    const detail10203 = document.getElementById("detail10203");
+
+    open10203.addEventListener("click", () => {
+        detail10203.style.display = "flex";
+    });
+    close10203.addEventListener("click", () => {
+        detail10203.style.display = "none";
+    });
+
+    // 10204モーダルの開閉処理
+    const open10204 = document.getElementById("open10204");
+    const close10204 = document.getElementById("close10204");
+    const detail10204 = document.getElementById("detail10204");
+
+    open10204.addEventListener("click", () => {
+        detail10204.style.display = "flex";
+    });
+    close10204.addEventListener("click", () => {
+        detail10204.style.display = "none";
+    });
+
+    // 10205モーダルの開閉処理
+    const open10205 = document.getElementById("open10205");
+    const close10205 = document.getElementById("close10205");
+    const detail10205 = document.getElementById("detail10205");
+
+    open10205.addEventListener("click", () => {
+        detail10205.style.display = "flex";
+    });
+    close10205.addEventListener("click", () => {
+        detail10205.style.display = "none";
+    });
+
+    // 10206モーダルの開閉処理
+    const open10206 = document.getElementById("open10206");
+    const close10206 = document.getElementById("close10206");
+    const detail10206 = document.getElementById("detail10206");
+
+    open10206.addEventListener("click", () => {
+        detail10206.style.display = "flex";
+    });
+    close10206.addEventListener("click", () => {
+        detail10206.style.display = "none";
+    });
+
+    // 10207モーダルの開閉処理
+    const open10207 = document.getElementById("open10207");
+    const close10207 = document.getElementById("close10207");
+    const detail10207 = document.getElementById("detail10207");
+
+    open10207.addEventListener("click", () => {
+        detail10207.style.display = "flex";
+    });
+    close10207.addEventListener("click", () => {
+        detail10207.style.display = "none";
+    });
+
+    // 10208モーダルの開閉処理
+    const open10208 = document.getElementById("open10208");
+    const close10208 = document.getElementById("close10208");
+    const detail10208 = document.getElementById("detail10208");
+
+    open10208.addEventListener("click", () => {
+        detail10208.style.display = "flex";
+    });
+    close10208.addEventListener("click", () => {
+        detail10208.style.display = "none";
+    });
+
+    // 10209モーダルの開閉処理
+    const open10209 = document.getElementById("open10209");
+    const close10209 = document.getElementById("close10209");
+    const detail10209 = document.getElementById("detail10209");
+
+    open10209.addEventListener("click", () => {
+        detail10209.style.display = "flex";
+    });
+    close10209.addEventListener("click", () => {
+        detail10209.style.display = "none";
+    });
+
+    // 10210モーダルの開閉処理
+    const open10210 = document.getElementById("open10210");
+    const close10210 = document.getElementById("close10210");
+    const detail10210 = document.getElementById("detail10210");
+
+    open10210.addEventListener("click", () => {
+        detail10210.style.display = "flex";
+    });
+    close10210.addEventListener("click", () => {
+        detail10210.style.display = "none";
+    });
+
+    // 10211モーダルの開閉処理
+    const open10211 = document.getElementById("open10211");
+    const close10211 = document.getElementById("close10211");
+    const detail10211 = document.getElementById("detail10211");
+
+    open10211.addEventListener("click", () => {
+        detail10211.style.display = "flex";
+    });
+    close10211.addEventListener("click", () => {
+        detail10211.style.display = "none";
+    });
+
+    // 10212モーダルの開閉処理
+    const open10212 = document.getElementById("open10212");
+    const close10212 = document.getElementById("close10212");
+    const detail10212 = document.getElementById("detail10212");
+
+    open10212.addEventListener("click", () => {
+        detail10212.style.display = "flex";
+    });
+    close10212.addEventListener("click", () => {
+        detail10212.style.display = "none";
+    });
+
+    // 10213モーダルの開閉処理
+    const open10213 = document.getElementById("open10213");
+    const close10213 = document.getElementById("close10213");
+    const detail10213 = document.getElementById("detail10213");
+
+    open10213.addEventListener("click", () => {
+        detail10213.style.display = "flex";
+    });
+    close10213.addEventListener("click", () => {
+        detail10213.style.display = "none";
+    });
+
+    // 10214モーダルの開閉処理
+    const open10214 = document.getElementById("open10214");
+    const close10214 = document.getElementById("close10214");
+    const detail10214 = document.getElementById("detail10214");
+
+    open10214.addEventListener("click", () => {
+        detail10214.style.display = "flex";
+    });
+    close10214.addEventListener("click", () => {
+        detail10214.style.display = "none";
+    });
+
+    // 10215モーダルの開閉処理
+    const open10215 = document.getElementById("open10215");
+    const close10215 = document.getElementById("close10215");
+    const detail10215 = document.getElementById("detail10215");
+
+    open10215.addEventListener("click", () => {
+        detail10215.style.display = "flex";
+    });
+    close10215.addEventListener("click", () => {
+        detail10215.style.display = "none";
+    });
+
+    // 10301モーダルの開閉処理
+    const open10301 = document.getElementById("open10301");
+    const close10301 = document.getElementById("close10301");
+    const detail10301 = document.getElementById("detail10301");
+
+    open10301.addEventListener("click", () => {
+        detail10301.style.display = "flex";
+    });
+    close10301.addEventListener("click", () => {
+        detail10301.style.display = "none";
+    });
+
+    // 10302モーダルの開閉処理
+    const open10302 = document.getElementById("open10302");
+    const close10302 = document.getElementById("close10302");
+    const detail10302 = document.getElementById("detail10302");
+
+    open10302.addEventListener("click", () => {
+        detail10302.style.display = "flex";
+    });
+    close10302.addEventListener("click", () => {
+        detail10302.style.display = "none";
+    });
+
+    // 10303モーダルの開閉処理
+    const open10303 = document.getElementById("open10303");
+    const close10303 = document.getElementById("close10303");
+    const detail10303 = document.getElementById("detail10303");
+
+    open10303.addEventListener("click", () => {
+        detail10303.style.display = "flex";
+    });
+    close10303.addEventListener("click", () => {
+        detail10303.style.display = "none";
+    });
+
+    // 10304モーダルの開閉処理
+    const open10304 = document.getElementById("open10304");
+    const close10304 = document.getElementById("close10304");
+    const detail10304 = document.getElementById("detail10304");
+
+    open10304.addEventListener("click", () => {
+        detail10304.style.display = "flex";
+    });
+    close10304.addEventListener("click", () => {
+        detail10304.style.display = "none";
+    });
+
+    // 10205モーダルの開閉処理
+    const open10305 = document.getElementById("open10305");
+    const close10305 = document.getElementById("close10305");
+    const detail10305 = document.getElementById("detail10305");
+
+    open10305.addEventListener("click", () => {
+        detail10305.style.display = "flex";
+    });
+    close10305.addEventListener("click", () => {
+        detail10305.style.display = "none";
+    });
+
+    // 10206モーダルの開閉処理
+    const open10306 = document.getElementById("open10306");
+    const close10306 = document.getElementById("close10306");
+    const detail10306 = document.getElementById("detail10306");
+
+    open10306.addEventListener("click", () => {
+        detail10306.style.display = "flex";
+    });
+    close10306.addEventListener("click", () => {
+        detail10306.style.display = "none";
+    });
+
+    // 10207モーダルの開閉処理
+    const open10307 = document.getElementById("open10307");
+    const close10307 = document.getElementById("close10307");
+    const detail10307 = document.getElementById("detail10307");
+
+    open10307.addEventListener("click", () => {
+        detail10307.style.display = "flex";
+    });
+    close10307.addEventListener("click", () => {
+        detail10307.style.display = "none";
+    });
+
+    // 10308モーダルの開閉処理
+    const open10308 = document.getElementById("open10308");
+    const close10308 = document.getElementById("close10308");
+    const detail10308 = document.getElementById("detail10308");
+
+    open10308.addEventListener("click", () => {
+        detail10308.style.display = "flex";
+    });
+    close10308.addEventListener("click", () => {
+        detail10308.style.display = "none";
+    });
+
+    // 10309モーダルの開閉処理
+    const open10309 = document.getElementById("open10309");
+    const close10309 = document.getElementById("close10309");
+    const detail10309 = document.getElementById("detail10309");
+
+    open10309.addEventListener("click", () => {
+        detail10309.style.display = "flex";
+    });
+    close10309.addEventListener("click", () => {
+        detail10309.style.display = "none";
+    });
+
+    // 10310モーダルの開閉処理
+    const open10310 = document.getElementById("open10310");
+    const close10310 = document.getElementById("close10310");
+    const detail10310 = document.getElementById("detail10310");
+
+    open10310.addEventListener("click", () => {
+        detail10310.style.display = "flex";
+    });
+    close10310.addEventListener("click", () => {
+        detail10310.style.display = "none";
+    });
+
+    // 10311モーダルの開閉処理
+    const open10311 = document.getElementById("open10311");
+    const close10311 = document.getElementById("close10311");
+    const detail10311 = document.getElementById("detail10311");
+
+    open10311.addEventListener("click", () => {
+        detail10311.style.display = "flex";
+    });
+    close10311.addEventListener("click", () => {
+        detail10311.style.display = "none";
+    });
+
+    // 10312モーダルの開閉処理
+    const open10312 = document.getElementById("open10312");
+    const close10312 = document.getElementById("close10312");
+    const detail10312 = document.getElementById("detail10312");
+
+    open10312.addEventListener("click", () => {
+        detail10312.style.display = "flex";
+    });
+    close10312.addEventListener("click", () => {
+        detail10312.style.display = "none";
+    });
+
+    // 10313モーダルの開閉処理
+    const open10313 = document.getElementById("open10313");
+    const close10313 = document.getElementById("close10313");
+    const detail10313 = document.getElementById("detail10313");
+
+    open10313.addEventListener("click", () => {
+        detail10313.style.display = "flex";
+    });
+    close10313.addEventListener("click", () => {
+        detail10313.style.display = "none";
+    });
+
+    // 10314モーダルの開閉処理
+    const open10314 = document.getElementById("open10314");
+    const close10314 = document.getElementById("close10314");
+    const detail10314 = document.getElementById("detail10314");
+
+    open10314.addEventListener("click", () => {
+        detail10314.style.display = "flex";
+    });
+    close10314.addEventListener("click", () => {
+        detail10314.style.display = "none";
+    });
+
+    // 10315モーダルの開閉処理
+    const open10315 = document.getElementById("open10315");
+    const close10315 = document.getElementById("close10315");
+    const detail10315 = document.getElementById("detail10315");
+
+    open10315.addEventListener("click", () => {
+        detail10315.style.display = "flex";
+    });
+    close10315.addEventListener("click", () => {
+        detail10315.style.display = "none";
+    });
+
+    // 105aモーダルの開閉処理
+    const open105a = document.getElementById("open105a");
+    const close105a = document.getElementById("close105a");
+    const detail105a = document.getElementById("detail105a");
+
+    open105a.addEventListener("click", () => {
+        detail105a.style.display = "flex";
+    });
+    close105a.addEventListener("click", () => {
+        detail105a.style.display = "none";
+    });
+
+    // 105bモーダルの開閉処理
+    const open105b = document.getElementById("open105b");
+    const close105b = document.getElementById("close105b");
+    const detail105b = document.getElementById("detail105b");
+
+    open105b.addEventListener("click", () => {
+        detail105b.style.display = "flex";
+    });
+    close105b.addEventListener("click", () => {
+        detail105b.style.display = "none";
+    });
+
+    // 105cモーダルの開閉処理
+    const open105c = document.getElementById("open105c");
+    const close105c = document.getElementById("close105c");
+    const detail105c = document.getElementById("detail105c");
+
+    open105c.addEventListener("click", () => {
+        detail105c.style.display = "flex";
+    });
+    close105c.addEventListener("click", () => {
+        detail105c.style.display = "none";
+    });
+
+    // 105dモーダルの開閉処理
+    const open105d = document.getElementById("open105d");
+    const close105d = document.getElementById("close105d");
+    const detail105d = document.getElementById("detail105d");
+
+    open105d.addEventListener("click", () => {
+        detail105d.style.display = "flex";
+    });
+    close105d.addEventListener("click", () => {
+        detail105d.style.display = "none";
+    });
+
+    // 105eモーダルの開閉処理
+    const open105e = document.getElementById("open105e");
+    const close105e = document.getElementById("close105e");
+    const detail105e = document.getElementById("detail105e");
+
+    open105e.addEventListener("click", () => {
+        detail105e.style.display = "flex";
+    });
+    close105e.addEventListener("click", () => {
+        detail105e.style.display = "none";
+    });
+
+    // 105fモーダルの開閉処理
+    const open105f = document.getElementById("open105f");
+    const close105f = document.getElementById("close105f");
+    const detail105f = document.getElementById("detail105f");
+
+    open105f.addEventListener("click", () => {
+        detail105f.style.display = "flex";
+    });
+    close105f.addEventListener("click", () => {
+        detail105f.style.display = "none";
+    });
+
+    // 105gモーダルの開閉処理
+    const open105g = document.getElementById("open105g");
+    const close105g = document.getElementById("close105g");
+    const detail105g = document.getElementById("detail105g");
+
+    open105g.addEventListener("click", () => {
+        detail105g.style.display = "flex";
+    });
+    close105g.addEventListener("click", () => {
+        detail105g.style.display = "none";
+    });
+
+    // 105hモーダルの開閉処理
+    const open105h = document.getElementById("open105h");
+    const close105h = document.getElementById("close105h");
+    const detail105h = document.getElementById("detail105h");
+
+    open105h.addEventListener("click", () => {
+        detail105h.style.display = "flex";
+    });
+    close105h.addEventListener("click", () => {
+        detail105h.style.display = "none";
+    });
+
+    // 105iモーダルの開閉処理
+    const open105i = document.getElementById("open105i");
+    const close105i = document.getElementById("close105i");
+    const detail105i = document.getElementById("detail105i");
+
+    open105i.addEventListener("click", () => {
+        detail105i.style.display = "flex";
+    });
+    close105i.addEventListener("click", () => {
+        detail105i.style.display = "none";
+    });
+
+    // 105jモーダルの開閉処理
+    const open105j = document.getElementById("open105j");
+    const close105j = document.getElementById("close105j");
+    const detail105j = document.getElementById("detail105j");
+
+    open105j.addEventListener("click", () => {
+        detail105j.style.display = "flex";
+    });
+    close105j.addEventListener("click", () => {
+        detail105j.style.display = "none";
+    });
+
+    // 105kモーダルの開閉処理
+    const open105k = document.getElementById("open105k");
+    const close105k = document.getElementById("close105k");
+    const detail105k = document.getElementById("detail105k");
+
+    open105k.addEventListener("click", () => {
+        detail105k.style.display = "flex";
+    });
+    close105k.addEventListener("click", () => {
+        detail105k.style.display = "none";
+    });
+
+    // 105lモーダルの開閉処理
+    const open105l = document.getElementById("open105l");
+    const close105l = document.getElementById("close105l");
+    const detail105l = document.getElementById("detail105l");
+
+    open105l.addEventListener("click", () => {
+        detail105l.style.display = "flex";
+    });
+    close105l.addEventListener("click", () => {
+        detail105l.style.display = "none";
+    });
+
+    // 105mモーダルの開閉処理
+    const open105m = document.getElementById("open105m");
+    const close105m = document.getElementById("close105m");
+    const detail105m = document.getElementById("detail105m");
+
+    open105m.addEventListener("click", () => {
+        detail105m.style.display = "flex";
+    });
+    close105m.addEventListener("click", () => {
+        detail105m.style.display = "none";
+    });
+
+    // 105nモーダルの開閉処理
+    const open105n = document.getElementById("open105n");
+    const close105n = document.getElementById("close105n");
+    const detail105n = document.getElementById("detail105n");
+
+    open105n.addEventListener("click", () => {
+        detail105n.style.display = "flex";
+    });
+    close105n.addEventListener("click", () => {
+        detail105n.style.display = "none";
+    });
+
+    // 105oモーダルの開閉処理
+    const open105o = document.getElementById("open105o");
+    const close105o = document.getElementById("close105o");
+    const detail105o = document.getElementById("detail105o");
+
+    open105o.addEventListener("click", () => {
+        detail105o.style.display = "flex";
+    });
+    close105o.addEventListener("click", () => {
+        detail105o.style.display = "none";
+    });
+
+    // 105pモーダルの開閉処理
+    const open105p = document.getElementById("open105p");
+    const close105p = document.getElementById("close105p");
+    const detail105p = document.getElementById("detail105p");
+
+    open105p.addEventListener("click", () => {
+        detail105p.style.display = "flex";
+    });
+    close105p.addEventListener("click", () => {
+        detail105p.style.display = "none";
+    });
+
+    // 105qモーダルの開閉処理
+    const open105q = document.getElementById("open105q");
+    const close105q = document.getElementById("close105q");
+    const detail105q = document.getElementById("detail105q");
+
+    open105q.addEventListener("click", () => {
+        detail105q.style.display = "flex";
+    });
+    close105q.addEventListener("click", () => {
+        detail105q.style.display = "none";
+    });
+
+    // 105rモーダルの開閉処理
+    const open105r = document.getElementById("open105r");
+    const close105r = document.getElementById("close105r");
+    const detail105r = document.getElementById("detail105r");
+
+    open105r.addEventListener("click", () => {
+        detail105r.style.display = "flex";
+    });
+    close105r.addEventListener("click", () => {
+        detail105r.style.display = "none";
+    });
+
+    // 105sモーダルの開閉処理
+    const open105s = document.getElementById("open105s");
+    const close105s = document.getElementById("close105s");
+    const detail105s = document.getElementById("detail105s");
+
+    open105s.addEventListener("click", () => {
+        detail105s.style.display = "flex";
+    });
+    close105s.addEventListener("click", () => {
+        detail105s.style.display = "none";
+    });
+
+    // 105tモーダルの開閉処理
+    const open105t = document.getElementById("open105t");
+    const close105t = document.getElementById("close105t");
+    const detail105t = document.getElementById("detail105t");
+
+    open105t.addEventListener("click", () => {
+        detail105t.style.display = "flex";
+    });
+    close105t.addEventListener("click", () => {
+        detail105t.style.display = "none";
+    });
+
+    // 105uモーダルの開閉処理
+    const open105u = document.getElementById("open105u");
+    const close105u = document.getElementById("close105u");
+    const detail105u = document.getElementById("detail105u");
+
+    open105u.addEventListener("click", () => {
+        detail105u.style.display = "flex";
+    });
+    close105u.addEventListener("click", () => {
+        detail105u.style.display = "none";
+    });
+
+    // 105vモーダルの開閉処理
+    const open105v = document.getElementById("open105v");
+    const close105v = document.getElementById("close105v");
+    const detail105v = document.getElementById("detail105v");
+
+    open105v.addEventListener("click", () => {
+        detail105v.style.display = "flex";
+    });
+    close105v.addEventListener("click", () => {
+        detail105v.style.display = "none";
+    });
+
+    // 105wモーダルの開閉処理
+    const open105w = document.getElementById("open105w");
+    const close105w = document.getElementById("close105w");
+    const detail105w = document.getElementById("detail105w");
+
+    open105w.addEventListener("click", () => {
+        detail105w.style.display = "flex";
+    });
+    close105w.addEventListener("click", () => {
+        detail105w.style.display = "none";
+    });
+
+    // 105xモーダルの開閉処理
+    const open105x = document.getElementById("open105x");
+    const close105x = document.getElementById("close105x");
+    const detail105x = document.getElementById("detail105x");
+
+    open105x.addEventListener("click", () => {
+        detail105x.style.display = "flex";
+    });
+    close105x.addEventListener("click", () => {
+        detail105x.style.display = "none";
     });
 
 
