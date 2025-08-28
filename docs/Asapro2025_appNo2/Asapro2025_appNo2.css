@@ -185,9 +185,9 @@ h1 {
 
 .notice {
     text-align: center;
-    margin: 30px auto;
+    margin: 30px auto 40px;
     font-size: 0.9rem;
-    line-height: 1.5rem;
+    line-height: 0.7rem;
 }
 
 .notice a {
@@ -197,6 +197,10 @@ h1 {
 .notice a:hover {
     color: #bcd8a8;
     transition: 0.2s;
+}
+
+.br-sp {
+    display: none;
 }
 
 .building-list {
@@ -548,6 +552,10 @@ h2 {
 }
 
 @media screen and (max-width:640px) {
+    .header-button {
+        gap: 7px;
+    }
+
     .filter-btn {
         padding: 0rem 0.2rem;
     }
@@ -579,9 +587,12 @@ h2 {
     }
 
     .notice {
-        margin: 30px auto;
-        font-size: 0.85rem;
-        line-height: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    .br-sp {
+        display: block;
     }
 
     .detail-content {
