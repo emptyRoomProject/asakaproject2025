@@ -578,6 +578,12 @@ h2 {
         max-height: 85%;
     }
 
+    .notice {
+        margin: 30px auto;
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+
     .detail-content {
         width: 80%;
         max-width: 370px;
