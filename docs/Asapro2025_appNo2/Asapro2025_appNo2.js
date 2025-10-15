@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openFilter.addEventListener("click", () => {
         filterModal.style.display = "flex";
+        document.body.classList.add('modal-open');
     });
 
     closeFilter.addEventListener("click", () => {
         filterModal.style.display = "none";
+        document.body.classList.remove('modal-open');
     });
 
     // ページ全体切り替え
