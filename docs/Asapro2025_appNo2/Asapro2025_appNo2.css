@@ -825,7 +825,6 @@ h2 {
     flex-direction: column;
     gap: 8px;
     min-height: 0;
-    /*overflow-y: auto;*/
     justify-content: flex-end;
 }
 
@@ -1027,5 +1026,9 @@ h2 {
         padding: 10px 0px;
         width: 70px;
         margin: 0 0 5px;
+    }
+
+    .text-area textarea {
+        width: 120%;
     }
 }
