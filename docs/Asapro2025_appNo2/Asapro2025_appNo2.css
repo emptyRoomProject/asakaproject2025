@@ -1069,6 +1069,10 @@ h2 {
         flex: 1;
     }
 
+    .post-area .text-area textarea {
+        height: 50px;
+    }
+
     .comment-area {
         width: 100%;
         box-sizing: border-box;
