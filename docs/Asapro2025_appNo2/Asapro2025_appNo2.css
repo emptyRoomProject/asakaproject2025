@@ -1043,18 +1043,18 @@ h2 {
     }
 
     .class-count-btn button {
-        width: 115px;
-        padding: 10px 15px;
-        margin: 10px 10px 5px;
-        font-size: 18px;
+        /*width: 115px;*/
+        /*padding: 10px 15px;*/
+        /*margin: 10px 10px 5px;*/
+        /*font-size: 18px;*/
         letter-spacing: 0.03em;
     }
 
     .crowd-count-btn button {
         line-height: 1.02rem;
-        padding: 10px 0px;
-        width: 90%;
-        margin: 0 0 5px;
+        /*padding: 10px 0px;*/
+        /*width: 90%;*/
+        /*margin: 0 0 5px;*/
     }
 
     /*.post-area {
