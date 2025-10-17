@@ -1057,11 +1057,29 @@ h2 {
         /*margin: 0 0 5px;*/
     }
 
-    /*.post-area {
-        width: 80%;
-    }*/
+    .post-area {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 8px;
+    }
 
-    /*.text-area textarea {
-        width: 90%;
-    }*/
+    .text-area {
+        flex: 1;
+    }
+
+    .comment-area {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.85rem;
+    }
+
+    .post-btn {
+        flex-shrink: 0;
+    }
+
+    .post-image {
+        width: 22px;
+    }
 }
