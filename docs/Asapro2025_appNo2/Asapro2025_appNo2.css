@@ -611,13 +611,14 @@ h2 {
 
 .tab-1:hover {
     opacity: .8;
-    transition: 0.2s;
+    /*transition: 0.2s;*/
 }
 
 .tab-1.active {
     background: #768765;
     border-color: #768765;
     color: #fff;
+    /*transition: 0s;*/
 }
 
 .tab-1.active button {
@@ -648,13 +649,14 @@ h2 {
 
 .tab-2:hover {
     opacity: .8;
-    transition: 0.2s;
+    /*transition: 0.2s;*/
 }
 
 .tab-2.active {
     background: #768765;
     color: #fff;
     border-color: #768765;
+    /*transition: 0s;*/
 }
 
 .tab-2.active button {
@@ -745,10 +747,28 @@ h2 {
     transition: 0.2s;
 }
 
+.count-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0px;
+}
+
+.logo_human {
+    width: 20px;
+    height: auto;
+    align-content: center;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
 .count {
     font-size: 18px;
     text-align: center;
     letter-spacing: 0.05em;
+    color: #777;
+    margin-right: 15px;
 }
 
 .crowd-container {
@@ -775,6 +795,15 @@ h2 {
     border-radius: 7px;
     margin: 0 0 5px;
     cursor: pointer;
+}
+
+.crowd-count-btn .logo_human {
+    width: 18px;
+}
+
+.crowd-count-btn .count {
+    font-size: 17px;
+    margin-right: 10px;
 }
 
 #btnGaragara {
@@ -1003,12 +1032,12 @@ h2 {
         display: block;
     }
 
-    .tabs {
+    /*.tabs {
         max-width: 93.4%;
-    }
+    }*/
 
     .detail-content {
-        width: 80%;
+        /*width: 80%;*/
         max-width: 100%;
         max-height: 85%;
     }
