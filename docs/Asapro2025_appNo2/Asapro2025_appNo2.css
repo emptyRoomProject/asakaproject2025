@@ -1059,8 +1059,8 @@ h2 {
 
     .post-area {
         flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
+        /*align-items: center;*/
+        /*justify-content: center;*/
         gap: 8px;
         padding: 0 8px;
     }
