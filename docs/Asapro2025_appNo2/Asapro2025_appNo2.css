@@ -291,21 +291,6 @@ h2 {
 
 .close-btn {
     position: absolute;
-    top: -0.7rem;
-    right: -1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.logo_close {
-    width: 45px;
-    height: auto;
-    display: block;
-}
-
-.close-btn2 {
-    position: absolute;
     top: 0.4rem;
     right: 0.1rem;
     border: none;
@@ -313,12 +298,12 @@ h2 {
     cursor: pointer;
 }
 
-.close-btn2:hover {
+.close-btn:hover {
     opacity: .5;
     transition: 0.2s;
 }
 
-.logo_close2 {
+.logo_close {
     width: 20px;
     height: auto;
     display: block;
