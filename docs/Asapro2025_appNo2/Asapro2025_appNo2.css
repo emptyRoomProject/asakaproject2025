@@ -1005,6 +1005,36 @@ h2 {
     opacity: .8;
 }
 
+/*設定画面*/
+.setting-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding: 0 1.7rem;
+}
+
+.back-btn {
+    position: absolute;
+    top: 1.8rem;
+    left: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.logo_back {
+    width: 25px;
+    height: auto;
+    display: block;
+}
+
+.logo_back:hover {
+    opacity: .5;
+    transition: 0.2s;
+}
+
 .page {
     display: none;
 }
@@ -1021,35 +1051,21 @@ h2 {
     display: block;
 }
 
-.setting-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
 .menu-btn {
     display: block;
-    width: 200px;
+    width: 250px;
     margin: 20px auto;
     padding: 10px 12px;
     border: none;
-    background: #eee;
+    background: #fff;
     cursor: pointer;
+    font-family: "Kiwi Maru", sans-serif;
+    font-size: 18px;
+    color: #555;
 }
 
 .menu-btn:hover {
     background: #ccc;
-}
-
-.back-btn {
-    display: block;
-    margin: 10px 0;
-    padding: 8px 12px;
-    border: none;
-    background: #eee;
-    cursor: pointer;
 }
 
 @media screen and (max-width:640px) {
