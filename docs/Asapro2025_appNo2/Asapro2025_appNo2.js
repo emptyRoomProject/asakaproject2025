@@ -1,4 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const closeImages = document.querySelectorAll('.logo_close'); // すべての閉じるボタン画像を取得
+
+    // テーマごとの閉じるボタン画像パス
+    const closeBtnImages = {
+        red: 'close-red.png',
+        pink: 'close-pink.png',
+        orange: 'close-orange.png',
+        yellow: 'close-yellow.png',
+        lightgreen: 'close-lightgreen.png',
+        green: 'close-green.png',
+        skyblue: 'close-skyblue.png',
+        blue: 'close-blue.png',
+        purple: 'close-purple.png',
+        beige: 'close-beige.png',
+        brown: 'close-brown.png',
+        gray: 'close-gray.png',
+        black: 'close-black.png',
+        default: 'close.png'
+    };
+
+    // ✅ テーマ適用用関数
+    function applyTheme(theme) {
+        document.body.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        // すべての閉じるボタン画像をテーマに合わせて変更
+        closeImages.forEach(img => {
+            img.src = closeBtnImages[theme] || closeBtnImages.default;
+        });
+
+        // ✅ ラジオボタンのチェック状態を更新
+        themeButtons.forEach(btn => {
+            btn.checked = (btn.getAttribute('data-theme') === theme);
+        });
+    }
+
+    // ✅ テーマボタンクリック処理
+    themeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const theme = button.getAttribute('data-theme');
+            applyTheme(theme);
+        });
+    });
+
+    // ✅ ページ読み込み時に前回のテーマを復元
+    const savedTheme = localStorage.getItem('theme') || 'default';
+    applyTheme(savedTheme);
+
     // フィルターモーダルの開閉処理
     const openFilter = document.getElementById("openFilter");
     const closeFilter = document.getElementById("closeFilter");
@@ -14,43 +62,63 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove('modal-open');
     });
 
-    // ページ全体切り替え
+    // ページ管理
     const homePage = document.getElementById("homePage");
-    const settingPage = document.getElementById("settingPage");
-    const openSetting = document.getElementById("openSetting");
-    const backHome = document.getElementById("backHome");
-
-    openSetting.addEventListener("click", () => {
-        homePage.classList.remove("active");
-        settingPage.classList.add("active");
-    });
-
-    backHome.addEventListener("click", () => {
-        settingPage.classList.remove("active");
-        homePage.classList.add("active");
-    });
-
-    // 設定ページ内の切り替え
+    const mypagePage = document.getElementById("mypagePage");
     const subPages = document.querySelectorAll(".sub-page");
-    const menuBtns = document.querySelectorAll(".menu-btn");
-    const backBtns = document.querySelectorAll(".back-btn");
 
-    function showSubpage(subpageId) {
-        subPages.forEach(p => p.classList.remove("active"));
-        document.getElementById(subpageId).classList.add("active");
+    // ---- ハンバーガーメニュー処理 ----
+    document.querySelectorAll(".hamb").forEach(hamb => {
+        const blackBg = hamb.parentElement.querySelector(".black-bg");
+
+        hamb.addEventListener("click", () => {
+            hamb.classList.toggle("active");
+            blackBg.classList.toggle("open");
+        });
+
+        // 背景クリック時：背景の外側のみ反応
+        document.addEventListener("click", (e) => {
+            // クリック位置がblack-bgでもhambでもないなら閉じる
+            if (!blackBg.contains(e.target) && !hamb.contains(e.target)) {
+                hamb.classList.remove("active");
+                blackBg.classList.remove("open");
+            }
+        });
+    });
+
+    // ---- メニュー内の各ボタン ----
+    function showSubpage(id) {
+        // すべてのページを非表示にする
+        document.querySelectorAll(".page, .sub-page").forEach(p => {
+            p.classList.remove("active");
+        });
+
+        // 指定されたページだけ表示
+        document.getElementById(id).classList.add("active");
+
+        // メニューを閉じる
+        document.querySelectorAll(".hamb").forEach(h => h.classList.remove("active"));
+        document.querySelectorAll(".black-bg").forEach(bg => bg.classList.remove("open"));
     }
 
-    menuBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const target = btn.dataset.target;
-            showSubpage(target);
-        });
+
+    // 各メニュー項目
+    document.querySelectorAll(".menuTheme").forEach(btn => {
+        btn.addEventListener("click", () => showSubpage("themePage"));
+    });
+    document.querySelectorAll(".menuContact").forEach(btn => {
+        btn.addEventListener("click", () => showSubpage("contactPage"));
+    });
+    document.querySelectorAll(".menuTerms").forEach(btn => {
+        btn.addEventListener("click", () => showSubpage("termsPage"));
     });
 
-    backBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            showSubpage("menuPage");
-        });
+    // ---- ホーム／マイページ移動 ----
+    document.querySelectorAll(".openMypage").forEach(btn => {
+        btn.addEventListener("click", () => showSubpage("mypagePage"));
+    });
+    document.querySelectorAll(".backHome").forEach(btn => {
+        btn.addEventListener("click", () => showSubpage("homePage"));
     });
 
 
@@ -89,6 +157,44 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = 'none';
             document.body.classList.remove('modal-open');
         });
+
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const closeImg = document.querySelector('.logo_close');
+        // テーマごとの閉じるボタン画像をまとめて管理
+        const closeBtnImages = {
+            red: 'close-red.png',
+            pink: 'close-pink.png',
+            orange: 'close-orange.png',
+            yellow: 'close-yellow.png',
+            lightgreen: 'close-lightgreen.png',
+            green: 'close-green.png',
+            skyblue: 'close-skyblue.png',
+            blue: 'close-blue.png',
+            purple: 'close-purple.png',
+            beige: 'close-beige.png',
+            brown: 'close-brown.png',
+            gray: 'close-gray.png',
+            black: 'close-black.png',
+            default: 'close.png'
+        };
+        // テーマ変更処理
+        themeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const theme = button.getAttribute('data-theme');
+                document.body.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                // 画像をテーマに応じて変更
+                closeImg.src = closeBtnImages[theme] || closeBtnImages.default;
+            });
+        });
+
+        // ページ読み込み時に前回のテーマを復元
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.setAttribute('data-theme', savedTheme);
+            closeImg.src = closeBtnImages[savedTheme] || closeBtnImages.default;
+        }
+
 
         // タブ切り替え
         tabContainers.forEach(container => {
@@ -290,10 +396,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300); // ← CSSの transition の duration と合わせて！
     }
 
-
-
-
-
     // フィルタの項目をクリックした時の色変更
     document.querySelectorAll(".option-group button").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -318,7 +420,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // キーワード入力欄もクリアしたいなら
         document.getElementById("keyword").value = "";
     });
-
 
     // ヘッダーに曜日と時限の表示
     const weekdays = ["日曜", "月曜", "火曜", "水曜", "木曜", "金曜", "土曜"];
@@ -386,4 +487,147 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Asapro2025_appNo2.js — テーマ切替（デバッグ付き）
+    (function () {
+        // ヘルパー: body の theme- で始まるクラスをすべて削除
+        function clearThemeClasses(el) {
+            Array.from(el.classList)
+                .filter(c => c.startsWith('theme-'))
+                .forEach(c => el.classList.remove(c));
+        }
+
+        // テーマ適用処理
+        function applyTheme(name) {
+            if (!name) return;
+            clearThemeClasses(document.body);
+            document.body.classList.add(`theme-${name}`);
+            localStorage.setItem('theme', name);
+            // active ボタン管理
+            document.querySelectorAll('#themeSelector .theme-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.theme === name);
+            });
+            // 🟡 ここから追加部分（色名テキストを変更）
+            const legendRed = document.querySelector('.legend-red');
+            const legendBlue = document.querySelector('.legend-blue');
+
+            if (legendRed && legendBlue) {
+                switch (name) {
+                    case 'normal':
+                        legendRed.textContent = '赤：授業あり';
+                        legendBlue.textContent = '青：授業なし';
+                        break;
+                    case 'colorblind':
+                        legendRed.textContent = 'オレンジ：授業あり';
+                        legendBlue.textContent = '青：授業なし';
+                        break;
+                    case 'red':
+                        legendRed.textContent = '赤：授業あり';
+                        legendBlue.textContent = '青：授業なし';
+                        break;
+                    case 'pink':
+                        legendRed.textContent = 'ピンク：授業あり';
+                        legendBlue.textContent = '水色：授業なし';
+                        break;
+                    case 'orange':
+                        legendRed.textContent = 'オレンジ：授業あり';
+                        legendBlue.textContent = '緑：授業なし';
+                        break;
+                    case 'yellow':
+                        legendRed.textContent = '黄：授業あり';
+                        legendBlue.textContent = '水色：授業なし';
+                        break;
+                    case 'lightgreen':
+                        legendRed.textContent = 'ピンク：授業あり';
+                        legendBlue.textContent = '黄緑：授業なし';
+                        break;
+                    case 'green':
+                        legendRed.textContent = '茶：授業あり';
+                        legendBlue.textContent = '緑：授業なし';
+                        break;
+                    case 'skyblue':
+                        legendRed.textContent = 'ピンク：授業あり';
+                        legendBlue.textContent = '水色：授業なし';
+                        break;
+                    case 'blue':
+                        legendRed.textContent = 'グレー：授業あり';
+                        legendBlue.textContent = '青：授業なし';
+                        break;
+                    case 'purple':
+                        legendRed.textContent = 'オレンジ：授業あり';
+                        legendBlue.textContent = '紫：授業なし';
+                        break;
+                    case 'beige':
+                        legendRed.textContent = 'ピンク：授業あり';
+                        legendBlue.textContent = 'ベージュ：授業なし';
+                        break;
+                    case 'brown':
+                        legendRed.textContent = 'ベージュ：授業あり';
+                        legendBlue.textContent = '茶：授業なし';
+                        break;
+                    case 'gray':
+                        legendRed.textContent = 'グレー：授業あり';
+                        legendBlue.textContent = '黒：授業なし';
+                        break;
+                    case 'black':
+                        legendRed.textContent = 'グレー：授業あり';
+                        legendBlue.textContent = '白：授業なし';
+                        break;
+                    default:
+                        legendRed.textContent = '赤：授業あり';
+                        legendBlue.textContent = '青：授業なし';
+                        break;
+                }
+            }
+            console.log(`[theme] applyTheme → theme-${name}`);
+        }
+
+        // 初期化
+        function initThemeSwitcher() {
+            const themeSelector = document.getElementById('themeSelector');
+            if (!themeSelector) {
+                console.error('[theme] #themeSelector が見つかりません。HTML内の id を確認してください。');
+                return;
+            }
+
+            // ボタン一覧を確認（デバッグ用ログ）
+            const buttons = Array.from(themeSelector.querySelectorAll('.theme-btn'));
+            console.log('[theme] themeSelector found:', !!themeSelector, 'buttons:', buttons.length);
+            buttons.forEach(b => {
+                if (!b.dataset.theme) {
+                    console.warn('[theme] theme-btn に data-theme がありません:', b);
+                }
+            });
+
+            // 個別リスナー（イベント委譲に問題がある場合に備えて個別登録）
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const name = btn.dataset.theme;
+                    console.log('[theme] button clicked:', name);
+                    if (!name) return;
+                    applyTheme(name);
+                });
+            });
+
+            // 保存済みテーマの復元 or 初期ノーマル
+            const saved = localStorage.getItem('theme');
+            if (saved) {
+                console.log('[theme] saved theme detected:', saved);
+                applyTheme(saved);
+            } else {
+                console.log('[theme] no saved theme — applying theme-normal by default');
+                applyTheme('normal');
+            }
+        }
+
+        // DOMContentLoaded 待ち（既に終わっている場合は即実行）
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initThemeSwitcher);
+        } else {
+            initThemeSwitcher();
+        }
+    })();
+
+
+
 });
