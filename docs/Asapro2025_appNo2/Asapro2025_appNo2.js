@@ -4,20 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // テーマごとの閉じるボタン画像パス
     const closeBtnImages = {
-        red: 'close-red.png',
-        pink: 'close-pink.png',
-        orange: 'close-orange.png',
-        yellow: 'close-yellow.png',
-        lightgreen: 'close-lightgreen.png',
-        green: 'close-green.png',
-        skyblue: 'close-skyblue.png',
-        blue: 'close-blue.png',
-        purple: 'close-purple.png',
-        beige: 'close-beige.png',
-        brown: 'close-brown.png',
-        gray: 'close-gray.png',
-        black: 'close-black.png',
-        default: 'close.png'
+        red: 'icon/close-red.png',
+        pink: 'icon/close-pink.png',
+        orange: 'icon/close-orange.png',
+        yellow: 'icon/close-yellow.png',
+        lightgreen: 'icon/close-lightgreen.png',
+        green: 'icon/close-green.png',
+        skyblue: 'icon/close-skyblue.png',
+        blue: 'icon/close-blue.png',
+        purple: 'icon/close-purple.png',
+        beige: 'icon/close-beige.png',
+        brown: 'icon/close-brown.png',
+        gray: 'icon/close-gray.png',
+        black: 'icon/close-black.png',
+        default: 'icon/close.png'
     };
 
     // ✅ テーマ適用用関数
@@ -162,20 +162,20 @@ document.addEventListener("DOMContentLoaded", function () {
         const closeImg = document.querySelector('.logo_close');
         // テーマごとの閉じるボタン画像をまとめて管理
         const closeBtnImages = {
-            red: 'close-red.png',
-            pink: 'close-pink.png',
-            orange: 'close-orange.png',
-            yellow: 'close-yellow.png',
-            lightgreen: 'close-lightgreen.png',
-            green: 'close-green.png',
-            skyblue: 'close-skyblue.png',
-            blue: 'close-blue.png',
-            purple: 'close-purple.png',
-            beige: 'close-beige.png',
-            brown: 'close-brown.png',
-            gray: 'close-gray.png',
-            black: 'close-black.png',
-            default: 'close.png'
+            red: 'icon/close-red.png',
+            pink: 'icon/close-pink.png',
+            orange: 'icon/close-orange.png',
+            yellow: 'icon/close-yellow.png',
+            lightgreen: 'icon/close-lightgreen.png',
+            green: 'icon/close-green.png',
+            skyblue: 'icon/close-skyblue.png',
+            blue: 'icon/close-blue.png',
+            purple: 'icon/close-purple.png',
+            beige: 'icon/close-beige.png',
+            brown: 'icon/close-brown.png',
+            gray: 'icon/close-gray.png',
+            black: 'icon/close-black.png',
+            default: 'icon/close.png'
         };
         // テーマ変更処理
         themeButtons.forEach(button => {
