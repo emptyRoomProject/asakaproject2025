@@ -25,7 +25,7 @@ body {
     margin: 0;
     padding: 1.5rem 1.5rem;
     color: var(--text-color);
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.4s, color 0.4s;
 }
 
 body.modal-open {
@@ -96,11 +96,11 @@ body.modal-open {
     font-weight: bolder;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 #login-btn:hover {
     background-color: #c2dcb2;
-    transition: 0.2s;
 }
 
 #homePage {
@@ -115,7 +115,7 @@ header {
     padding: 0 1.7rem;
     background: var(--accent-color);
     height: 50px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.4s ease;
 }
 
 .header-left {
@@ -144,6 +144,7 @@ header {
     height: auto;
     padding: 12px 8px 8px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .logo_filter {
@@ -159,7 +160,6 @@ header {
 .logo_filter:hover,
 .logo_home:hover {
     opacity: .8;
-    transition: 0.2s;
 }
 
 header ul,
@@ -200,13 +200,31 @@ header li {
     text-align: left;
     padding: 20px 0 10px;
     width: 160px;
-    border-bottom: 1px solid var(--text-color);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.black-bg ul li:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.3px;
+    background-color: var(--text-color);
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    content: "";
 }
 
 .black-bg ul li:hover {
-    background: var(--main-hover);
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.4s;
+}
+
+.black-bg ul li:hover:after {
+    transform: translate(0, 0);
 }
 
 .black-bg ul li button {
@@ -253,7 +271,7 @@ header li {
 
 /*アニメーション*/
 .black-bg {
-    transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+    transition: opacity 0.4s, visibility 0.4s, width 0.4s;
 }
 
 .hamb.active .line:nth-child(1) {
@@ -270,7 +288,7 @@ header li {
 }
 
 .animation {
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 h1 {
@@ -320,11 +338,11 @@ h1 {
 
 .notice a {
     color: var(--accent-hover);
+    transition: 0.4s;
 }
 
 .notice a:hover {
     color: var(--accent-color);
-    transition: 0.2s;
 }
 
 .br-sp {
@@ -351,11 +369,11 @@ h1 {
     align-items: center;
     color: var(--text-color);
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .building-item:hover {
     background-color: var(--main-hover);
-    transition: 0.2s;
 }
 
 .arrow {
@@ -411,7 +429,7 @@ h2 {
     color: var(--text-color);
     text-align: center;
     letter-spacing: 0.03em;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
 }
 
 .close-btn {
@@ -421,11 +439,11 @@ h2 {
     border: none;
     background: none;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .close-btn:hover {
     opacity: .5;
-    transition: 0.2s;
 }
 
 .logo_close {
@@ -450,6 +468,7 @@ h2 {
     border: 1.5px solid var(--accent-color);
     border-radius: 8px;
     font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 .filter-body input[type="text"]:focus {
@@ -473,7 +492,7 @@ h2 {
     background: var(--bg-color);
     font-size: 0.9rem;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .option-group button:hover,
@@ -516,11 +535,11 @@ h2 {
     color: var(--text-color);
     cursor: pointer;
     width: 220px;
+    transition: 0.4s;
 }
 
 .checkbox-group label:hover {
     color: var(--accent-hover);
-    transition: 0.2s;
 }
 
 .filter-footer {
@@ -546,21 +565,21 @@ h2 {
     background: var(--bg-color);
     color: var(--accent-hover);
     border: 2px solid var(--accent-color);
+    transition: 0.4s;
 }
 
 .clear-btn:hover {
     background-color: var(--main-color);
-    transition: 0.2s;
 }
 
 .search-btn {
     background: var(--accent-color);
     color: var(--bg-color);
+    transition: 0.4s;
 }
 
 .search-btn:hover {
     background-color: var(--accent-hover);
-    transition: 0.2s;
 }
 
 .building-detail {
@@ -569,10 +588,10 @@ h2 {
     padding: 0 1rem;
     margin-top: 0;
     transition:
-        max-height 0.35s linear,
-        padding 0.35s linear,
-        margin 0.35s linear,
-        opacity 0.25s linear;
+        max-height 0.4s linear,
+        padding 0.4s linear,
+        margin 0.4s linear,
+        opacity 0.4s linear;
 
     opacity: 0;
 }
@@ -619,13 +638,13 @@ h2 {
     color: var(--room-red-text);
     border-color: var(--room-red-border);
     font-size: 0.83rem;
+    transition: 0.4s;
 }
 
 .room.red:hover {
     background: var(--room-red-hover);
     color: var(--room-red-text-hover);
     border-color: var(--room-red-hover);
-    transition: 0.2s;
 }
 
 .room.blue {
@@ -633,13 +652,13 @@ h2 {
     color: var(--room-blue-text);
     border-color: var(--room-blue-border);
     font-size: 0.83rem;
+    transition: 0.4s;
 }
 
 .room.blue:hover {
     background: var(--room-blue-hover);
     color: var(--room-blue-text-hover);
     border-color: var(--room-blue-hover);
-    transition: 0.2s;
 }
 
 /* 教室情報モーダル */
@@ -843,13 +862,13 @@ h2 {
     border: 2px solid var(--room-red-border);
     background: var(--room-red-bg);
     color: var(--room-red-text);
+    transition: 0.4s;
 }
 
 #btnClass:hover {
     border: 2px solid var(--room-red-hover);
     background: var(--room-red-hover);
     color: var(--room-red-text-hover);
-    transition: 0.2s;
 }
 
 .free-container {
@@ -860,13 +879,13 @@ h2 {
     border: 2px solid var(--room-blue-border);
     background: var(--room-blue-bg);
     color: var(--room-blue-text);
+    transition: 0.4s;
 }
 
 #btnFree:hover {
     border: 2px solid var(--room-blue-hover);
     background: var(--room-blue-hover);
     color: var(--room-blue-text-hover);
-    transition: 0.2s;
 }
 
 .class-count-btn .count-item {
@@ -889,7 +908,7 @@ h2 {
     font-size: 18px;
     text-align: center;
     letter-spacing: 0.05em;
-    color: #777;
+    color: #888;
     margin-right: 15px;
 }
 
@@ -959,11 +978,11 @@ h2 {
 #btnGaragara {
     background: #fff;
     border: none;
+    transition: 0.4s;
 }
 
 #btnGaragara:hover {
     background: #dff2f4;
-    transition: 0.2s;
 }
 
 #btnGaragara .bar {
@@ -973,11 +992,11 @@ h2 {
 #btnSukuname {
     background: #fff;
     border: none;
+    transition: 0.4s;
 }
 
 #btnSukuname:hover {
     background: #e7f9e0;
-    transition: 0.2s;
 }
 
 #btnSukuname .bar {
@@ -987,11 +1006,11 @@ h2 {
 #btnHutsu {
     background: #fff;
     border: none;
+    transition: 0.4s;
 }
 
 #btnHutsu:hover {
     background: #faf8d6;
-    transition: 0.2s;
 }
 
 #btnHutsu .bar {
@@ -1001,11 +1020,11 @@ h2 {
 #btnKonzatsu {
     background: #fff;
     border: none;
+    transition: 0.4s;
 }
 
 #btnKonzatsu:hover {
     background: #fae9ce;
-    transition: 0.2s;
 }
 
 #btnKonzatsu .bar {
@@ -1027,16 +1046,16 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: 10px;
-    border: 1.5px solid var(--main-color);
+    border: 1.5px solid var(--accent-color);
     padding: 8px 12px;
     font-family: "Kiwi Maru", sans-serif;
 }
 
 .comment-text {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     flex: 1;
     line-height: 1.2rem;
 }
@@ -1047,7 +1066,7 @@ h2 {
     gap: 8px;
     margin-top: 4px;
     font-size: 0.75rem;
-    color: #999;
+    color: var(--accent-color);
 }
 
 .like-btn {
@@ -1081,12 +1100,13 @@ h2 {
 .comment-area {
     width: 280px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 2px solid var(--accent-color);
     background: var(--bg-color);
     padding: 10px;
     line-height: 1.05rem;
     font-family: "Kiwi Maru", sans-serif;
+    color: var(--text-color);
     resize: none;
 }
 
@@ -1102,11 +1122,11 @@ h2 {
 .post-image {
     width: 25px;
     cursor: pointer;
+        transition: 0.4s;
 }
 
 .post-image:hover {
     opacity: .8;
-    transition: 0.2s;
 }
 
 /* 各ページ設定*/
@@ -1190,12 +1210,12 @@ h2 {
     border: none;
     background: var(--accent-color);
     color: var(--bg-color);
+        transition: 0.4s;
 }
 
 .login-logout-container button:hover {
     cursor: pointer;
     background: var(--accent-hover);
-    transition: 0.2s;
 }
 
 /* テーマカラー設定 */
@@ -1219,12 +1239,12 @@ h2 {
     margin-top: 25px;
     position: relative;
     outline: none;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .theme-btn:hover {
     opacity: .8;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .theme-btn::after {
@@ -1236,7 +1256,7 @@ h2 {
     font-size: 40px;
     color: #fff;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
 }
 
 .theme-btn:checked::after {
@@ -1325,11 +1345,11 @@ h2 {
     color: var(--bg-color);
     background: var(--accent-color);
     border-radius: 50px;
+        transition: 0.4s;
 }
 
 .contact-form:hover {
     background: var(--accent-hover);
-    transition: 0.2s;
 }
 
 /* 利用規約 */
@@ -1663,17 +1683,8 @@ h2 {
         padding: 0 1rem;
     }
 
-    .header-container {
-        margin-top: 0.5rem;
-        margin-left: 0.2rem;
-    }
-
     h1 {
         font-size: 1.4rem;
-    }
-
-    .header-button {
-        margin-top: 0.4rem;
     }
 
     .header-right {
@@ -1750,5 +1761,15 @@ h2 {
 
     .post-image {
         width: 22px;
+    }
+
+    /* お問い合わせ */
+    .contact-container {
+        padding: 0 20px;
+    }
+
+    /* 利用規約 */
+    .terms-text {
+        padding: 0 20px;
     }
 }
