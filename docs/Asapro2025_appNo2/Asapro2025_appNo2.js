@@ -288,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             item.innerHTML = `
             <div class="comment-content">
+                <span class="like-count">ユーザ名</span>
                 <div class="comment-text">${text}</div>
                 <div class="comment-meta">
                     <span class="time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
