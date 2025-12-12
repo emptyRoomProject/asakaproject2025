@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         brown: 'icon/close-brown.png',
         gray: 'icon/close-gray.png',
         black: 'icon/close-black.png',
+        sendaigreen: 'icon/close-sendaigreen.png',
         default: 'icon/close.png'
     };
 
@@ -175,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
             brown: 'icon/close-brown.png',
             gray: 'icon/close-gray.png',
             black: 'icon/close-black.png',
+            sendaigreen: 'icon/close-sendaigreen.png',
             default: 'icon/close.png'
         };
         // テーマ変更処理
@@ -573,6 +575,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     case 'black':
                         legendRed.textContent = 'グレー：授業あり';
                         legendBlue.textContent = '白：授業なし';
+                        break;
+                    case 'sendaigreen':
+                        legendRed.textContent = '専大グリーン：授業あり';
+                        legendBlue.textContent = '専大ブルー：授業なし';
                         break;
                     default:
                         legendRed.textContent = '赤：授業あり';
